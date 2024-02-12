@@ -219,7 +219,11 @@ width: 50%;
     color:#ffffff
 }
 
-.produt{
+.tabs input[type="radio"]:checked + label + .tab {
+    display: block;
+}
+
+.product{
     display: flex;
     align-items: center;
     padding: 25px;
@@ -227,12 +231,12 @@ width: 50%;
 
 }
 
-.produt-img{
+.product-img{
     width: 50%;
     text-align: left;
 }
 
-.produt-img h4{
+.product-img h4{
     display: inline-block;
     padding: 5px 7px;
     line-height: 15px;
