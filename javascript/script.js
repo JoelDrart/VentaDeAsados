@@ -10,4 +10,26 @@ var swiper = new Swiper(".mySwiper-1",{
         nextEl:".swiper-button-next",
         prevtEl:".swiper-button-prev",
     }
+});
+
+var swiper = new Swiper(".mySwiper-2",{
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop:true,
+    loopfillGroupWithBlank: true,
+    navigation:{
+        nextEl:".swiper-button-next",
+        prevtEl:".swiper-button-prev",
+    },
+    breakpoints :{
+        0:{
+            slidesPerView: 1,
+        },
+        520:{
+            slidesPerView: 2,
+        },
+        950:{
+            slidesPerView: 3,
+        }
+    }
 })
