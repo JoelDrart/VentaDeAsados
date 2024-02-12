@@ -32,4 +32,14 @@ var swiper = new Swiper(".mySwiper-2",{
             slidesPerView: 3,
         }
     }
-})
+});
+
+let tabInputs = document.querySelectorAll(".tabInput");
+
+tabInputs.forEach(function(input){
+    input.addEvenListener('change',function(){
+        let id = input.ariaValueMax;
+        letthisSwiper = document.getElementById('swiper' +id);
+        thisSwiper.swiper.update();
+    })
+});
