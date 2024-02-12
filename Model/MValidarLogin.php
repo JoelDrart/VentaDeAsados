@@ -1,6 +1,7 @@
 <?php
 include("../Config/confg.php");
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtener los datos del formulario
     $usuario = $_POST['login-username'];

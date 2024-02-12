@@ -15,7 +15,6 @@ function showModal() {
     }
 }
 
-
 function closeModal() {
     document.getElementById('modal-container').style.display = 'none';
 }
@@ -42,3 +41,10 @@ function showError(errorMessage) {
     document.getElementById('error-message').innerText = errorMessage;
     openModal();
 }
+
+// Función para mostrar ventana modal de éxito
+function showSuccess(successMessage) {
+    alert(successMessage);
+}
+
+
