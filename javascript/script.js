@@ -1,4 +1,4 @@
-var swiper1 = new Swiper(".mySwiper-1", {
+var swiper = new Swiper(".mySwiper-1", {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
@@ -8,18 +8,18 @@ var swiper1 = new Swiper(".mySwiper-1", {
     },
     navigation: {
         nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev", // Corregido prevtEl a prevEl
+        prevEl: ".swiper-button-prev", 
     }
 });
 
-var swiper2 = new Swiper(".mySwiper-2", {
+var swiper = new Swiper(".mySwiper-2", {
     slidesPerView: 3,
     spaceBetween: 20,
     loop: true,
-    loopFillGroupWithBlank: true, // Corregido loopfillGroupWithBlank a loopFillGroupWithBlank
+    loopFillGroupWithBlank: true, 
     navigation: {
         nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev", // Corregido prevtEl a prevEl
+        prevEl: ".swiper-button-prev", 
     },
     breakpoints: {
         0: {
@@ -38,8 +38,8 @@ let tabInputs = document.querySelectorAll(".tabInput");
 
 tabInputs.forEach(function(input) {
     input.addEventListener('change', function() {
-        let id = input.getAttribute('aria-valuemax'); // Corregido ariaValueMax a getAttribute('aria-valuemax')
+        let id = input.ariaValueMax;
         let thisSwiper = document.getElementById('swiper' + id);
-        thisSwiper.swiper.update(); // Corregido thisSwiper.swiper.update() a thisSwiper.update()
+        thisSwiper.swiper.update(); 
     })
 });
