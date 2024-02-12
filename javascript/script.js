@@ -1,34 +1,34 @@
-var swiper = new Swiper(".mySwiper-1",{
-    slidesPerView:1,
+var swiper1 = new Swiper(".mySwiper-1", {
+    slidesPerView: 1,
     spaceBetween: 30,
-    loop:true,
+    loop: true,
     pagination: {
-        el:".swiper-pagination",
-        clickable:true,
+        el: ".swiper-pagination",
+        clickable: true,
     },
-    navigation:{
-        nextEl:".swiper-button-next",
-        prevtEl:".swiper-button-prev",
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev", // Corregido prevtEl a prevEl
     }
 });
 
-var swiper = new Swiper(".mySwiper-2",{
+var swiper2 = new Swiper(".mySwiper-2", {
     slidesPerView: 3,
     spaceBetween: 20,
-    loop:true,
-    loopfillGroupWithBlank: true,
-    navigation:{
-        nextEl:".swiper-button-next",
-        prevtEl:".swiper-button-prev",
+    loop: true,
+    loopFillGroupWithBlank: true, // Corregido loopfillGroupWithBlank a loopFillGroupWithBlank
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev", // Corregido prevtEl a prevEl
     },
-    breakpoints :{
-        0:{
+    breakpoints: {
+        0: {
             slidesPerView: 1,
         },
-        520:{
+        520: {
             slidesPerView: 2,
         },
-        950:{
+        950: {
             slidesPerView: 3,
         }
     }
@@ -36,10 +36,10 @@ var swiper = new Swiper(".mySwiper-2",{
 
 let tabInputs = document.querySelectorAll(".tabInput");
 
-tabInputs.forEach(function(input){
-    input.addEvenListener('change',function(){
-        let id = input.ariaValueMax;
-        letthisSwiper = document.getElementById('swiper' +id);
-        thisSwiper.swiper.update();
+tabInputs.forEach(function(input) {
+    input.addEventListener('change', function() {
+        let id = input.getAttribute('aria-valuemax'); // Corregido ariaValueMax a getAttribute('aria-valuemax')
+        let thisSwiper = document.getElementById('swiper' + id);
+        thisSwiper.swiper.update(); // Corregido thisSwiper.swiper.update() a thisSwiper.update()
     })
 });

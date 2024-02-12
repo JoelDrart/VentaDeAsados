@@ -219,7 +219,7 @@ width: 50%;
     color:#ffffff
 }
 
-.tabs input[type="radio"]:checked + label + .tab{
+.tabs input[type="radio"]:checked + label + .tab {
     display: block;
 }
 
