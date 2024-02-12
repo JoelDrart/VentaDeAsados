@@ -18,6 +18,9 @@ if($v1==4){
 else
 if($v1==5){
     include("../View/VInicioAdmin.php");
+}else
+if($v1==6){
+    include("../View/VEditarClientes.php");
 }
 else
 {

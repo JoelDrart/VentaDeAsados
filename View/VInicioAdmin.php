@@ -22,7 +22,7 @@
                 <div class ="menu-1">
                     <ul>
                         <li><a href="../controller/controlador.php?var1=5">Inicio</a></li>
-                        <li><a href="#">Edición</a></li>
+                        <li><a href="../controller/controlador.php?var1=6">Edición</a></li>
                         <li><a href="#">Reportes</a></li>
                     </ul>
                 </div>

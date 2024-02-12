@@ -1,6 +1,6 @@
 <?php
 include("../Config/confg.php");
-
+<link rel="stylesheet" href="../javascript/scriptLog.js">
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtener los datos del formulario
     $usuario = mysqli_real_escape_string($conexion, $_POST['register-username']);
