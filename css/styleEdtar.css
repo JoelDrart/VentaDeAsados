@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/*para el editar*/
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid #DB241B; /* Cambio de color del borde */
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  /* Estilos para las celdas de encabezado */
+  th {
+    background-color: #DB241B;
+    color: white;
+  }
+  
+  /* Estilos para las celdas de datos */
+  td {
+    background-color: #080202; /* Cambio de color de fondo */
+    color: white; /* Cambio de color del texto */
+  }
+  
+  /* Estilos para los inputs y selects */
+  input[type="text"],
+  select {
+    width: calc(100% - 16px); /* Ajuste para tener en cuenta el padding y el border */
+    padding: 8px;
+    border: 1px solid #DB241B; /* Cambio de color del borde */
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    background-color: #080202; /* Cambio de color de fondo */
+    color: white; /* Cambio de color del texto */
+  }
+  
+  /* Estilos para el botón de enviar */
+  input[type="submit"] {
+    background-color: #DB241B;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #BA1B0F;
+  }
+  

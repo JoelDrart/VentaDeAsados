@@ -9,50 +9,49 @@
   <link rel="stylesheet" href="../css/styleLog.css">
 </head>
 <body>
-    <header>
+<header>
 
     <div class="menu container">
-        
         <img class="logo-1" src="images/logo.svg" alt="">
         <input type="checkbox" id="menu" />
         <label for="menu">
             <img src="images/menu.png" class="menu-icono" alt="">
         </label>
-            <nav class="navbar">
-                <div class ="menu-1">
-                    <ul>
-                        <li><a href="../controller/controlador.php?var1=1">Inicio</a></li>
-                        <li><a href="#">Reservaciones</a></li>
-                        <li><a href="#">Menu</a></li>
-                    </ul>
-                </div>
+        <nav class="navbar">
+            <div class ="menu-1">
+                <ul>
+                    <li><a href="../controller/controlador.php?var1=5">Inicio</a></li>
+                    <li><a href="../controller/controlador.php?var1=6">Edición</a></li>
+                    <li><a href="#">Reportes</a></li>
+                </ul>
+            </div>
 
-                <img class="logo-2" src="../images/logo.svg" alt="">
-                <div class="menu-2">
-                    <ul>
-                        <li><a href="../View/VLogin.php">Login</a></li>
-                    </ul>
-                    <div class ="socials">
-                        <a href="https://www.facebook.com/esquina.sabor/">
-                            <div class="social">
-                                <img src="../images/s1.svg" alt="">
-                            </div>
-                        </a>
-                        <a href="https://www.tiktok.com/@esquinadelsabor7">
-                            <div class="social">
-                                <img src="../images/s2.svg" alt="">
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="social">
-                                <img src="../images/s3.svg" alt="">
-                            </div>
-                        </a>
-                    </div>
+            <img class="logo-2" src="../images/logo.svg" alt="">
+            <div class="menu-2">
+                <ul>
+                    <li><a href="">Admin</a></li>
+                </ul>
+                <div class ="socials">
+                    <a href="https://www.facebook.com/esquina.sabor/">
+                        <div class="social">
+                            <img src="../images/s1.svg" alt="">
+                        </div>
+                    </a>
+                    <a href="https://www.tiktok.com/@esquinadelsabor7">
+                        <div class="social">
+                            <img src="../images/s2.svg" alt="">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="social">
+                            <img src="../images/s3.svg" alt="">
+                        </div>
+                    </a>
                 </div>
-            </nav>
-        </div>
-    </header>
+            </div>
+        </nav>
+    </div>
+</header>
 
     <section class="body-login-registrar">
         <div class="container-login-registrar" id="login-container">
