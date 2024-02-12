@@ -94,7 +94,7 @@
             <h2>Información</h2>
             <div class="horario-txt">
                 <div class="txt">
-                    <img class="logo-2" src="images/logo.svg" alt="">
+                    <img class="logo-2" src="../images/logo.svg" alt="">
                 </div>
                 <div class="txt">
                     <h4>Horario</h4>
@@ -111,17 +111,17 @@
                     <div class ="socials">
                         <a href="#">
                             <div class="social">
-                                <img src="images/s1.svg" alt="">
+                                <img src="../images/s1.svg" alt="">
                             </div>
                         </a>
                         <a href="#">
                             <div class="social">
-                                <img src="images/s2.svg" alt="">
+                                <img src="../images/s2.svg" alt="">
                             </div>
                         </a>
                         <a href="#">
                             <div class="social">
-                                <img src="images/s3.svg" alt="">
+                                <img src="../images/s3.svg" alt="">
                             </div>
                         </a>
                     </div>
