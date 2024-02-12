@@ -21,7 +21,7 @@
             <nav class="navbar">
                 <div class ="menu-1">
                     <ul>
-                        <li><a href="http://localhost/GrupalAsados/grupo/">Inicio</a></li>
+                        <li><a href="../controller/controlador.php?var1=1">Inicio</a></li>
                         <li><a href="#">Reservaciones</a></li>
                         <li><a href="#">Menu</a></li>
                     </ul>
@@ -30,7 +30,7 @@
                 <img class="logo-2" src="../images/logo.svg" alt="">
                 <div class="menu-2">
                     <ul>
-                        <li><a href="../Controller/controlador.php?var1=2">Login</a></li>
+                        <li><a href="../View/VLogin.php">Login</a></li>
                     </ul>
                     <div class ="socials">
                         <a href="https://www.facebook.com/esquina.sabor/">
@@ -121,6 +121,6 @@
     </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script src="../JavaScript/scriptLog.js"></script>
+  <script src="../javascript/scriptLog.js"></script>
 </body>
 </html>

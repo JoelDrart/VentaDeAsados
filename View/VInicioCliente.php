@@ -6,28 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Asados</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="../Css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
 
         <div class="menu container">
         
-        <img class="logo-1" src="images/logo.svg" alt="">
+        <img class="logo-1" src="../images/logo.svg" alt="">
         <input type="checkbox" id="menu" />
         <label for="menu">
-            <img src="images/menu.png" class="menu-icono" alt="">
+            <img src="../images/menu.png" class="menu-icono" alt="">
         </label>
             <nav class="navbar">
                 <div class ="menu-1">
                     <ul>
-                        <li><a href="http://localhost/GrupalAsados/grupo/">Inicio</a></li>
+                        <li><a href="../controller/controlador.php?var1=4">Inicio</a></li>
                         <li><a href="#">Reservaciones</a></li>
                         <li><a href="#">Menu</a></li>
                     </ul>
                 </div>
 
-                <img class="logo-2" src="images/logo.svg" alt="">
+                <img class="logo-2" src="../images/logo.svg" alt="">
                 <div class="menu-2">
                     <ul>
                         <li><a href="">Cliente</a></li>
@@ -35,17 +35,17 @@
                     <div class ="socials">
                         <a href="https://www.facebook.com/esquina.sabor/">
                             <div class="social">
-                                <img src="images/s1.svg" alt="">
+                                <img src="../images/s1.svg" alt="">
                             </div>
                         </a>
                         <a href="https://www.tiktok.com/@esquinadelsabor7">
                             <div class="social">
-                                <img src="images/s2.svg" alt="">
+                                <img src="../images/s2.svg" alt="">
                             </div>
                         </a>
                         <a href="#">
                             <div class="social">
-                                <img src="images/s3.svg" alt="">
+                                <img src="../images/s3.svg" alt="">
                             </div>
                         </a>
                     </div>
@@ -71,7 +71,7 @@
                                 </div>
                             </div>
                             <div class="slider-img">
-                                <img src="images/slider2.png" alt="">
+                                <img src="../images/slider2.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                                 </div>
                             </div>
                             <div class="slider-img">
-                                <img src="images/slider1.png" alt="">
+                                <img src="../images/slider1.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                                 </div>
                             </div>
                             <div class="slider-img">
-                                <img src="images/slider3.png" alt="">
+                                <img src="../images/slider3.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -134,7 +134,7 @@
                     <div class="product">
                         <div class="product-img">
                             <h4>Plato 1</h4>
-                            <img src="images/food4.png" alt="">
+                            <img src="../images/food4.png" alt="">
                         </div>
                         <div class="product-txt">
                             <h4>Tomahawk</h4>
@@ -148,7 +148,7 @@
                         <div class="product">
                         <div class="product-img">
                             <h4>Plato 2</h4>
-                            <img src="images/food5.png" alt="">
+                            <img src="../images/food5.png" alt="">
                         </div>
                         <div class="product-txt">
                             <h4>Bife de chorizo</h4>
@@ -162,7 +162,7 @@
                         <div class="product">
                             <div class="product-img">
                                 <h4>Plato 3</h4>
-                                <img src="images/food6.png" alt="">
+                                <img src="../images/food6.png" alt="">
                             </div>
                             <div class="product-txt">
                                 <h4>Costillas de cerdo</h4>
@@ -186,7 +186,7 @@
                   <div class="product">
                     <div class="product-img">
                         <h4>Plato 4</h4>
-                        <img src="images/food7.png" alt="">
+                        <img src="../images/food7.png" alt="">
                     </div>
                     <div class="product-txt">
                         <h4>Camarones asados</h4>
@@ -200,7 +200,7 @@
                     <div class="product">
                       <div class="product-img">
                           <h4>Plato 5</h4>
-                          <img src="images/food8.png" alt="">
+                          <img src="../images/food8.png" alt="">
                       </div>
                       <div class="product-txt">
                           <h4>Mar y tierra</h4>
@@ -214,7 +214,7 @@
                     <div class="product">
                         <div class="product-img">
                             <h4>Plato 6</h4>
-                            <img src="images/food9.png" alt="">
+                            <img src="../images/food9.png" alt="">
                         </div>
                         <div class="product-txt">
                             <h4>Chuleta de pescado al grill</h4>
@@ -239,7 +239,7 @@
                   <div class="product">
                     <div class="product-img">
                         <h4>Plato 7</h4>
-                        <img src="images/food10.png" alt="">
+                        <img src="../images/food10.png" alt="">
                     </div>
                     <div class="product-txt">
                         <h4>Churrasco</h4>
@@ -253,7 +253,7 @@
                     <div class="product">
                       <div class="product-img">
                           <h4>Plato 8</h4>
-                          <img src="images/food11.png" alt="">
+                          <img src="../images/food11.png" alt="">
                       </div>
                       <div class="product-txt">
                           <h4>Menestra</h4>
@@ -267,7 +267,7 @@
                     <div class="product">
                       <div class="product-img">
                           <h4>Plato 9</h4>
-                          <img src="images/food12.png" alt="">
+                          <img src="../images/food12.png" alt="">
                       </div>
                       <div class="product-txt">
                           <h4>Alitas BBQ</h4>
@@ -281,7 +281,7 @@
                     <div class="product">
                         <div class="product-img">
                             <h4>Plato 10</h4>
-                            <img src="images/food13.png" alt="">
+                            <img src="../images/food13.png" alt="">
                         </div>
                         <div class="product-txt">
                             <h4>Picaditas</h4>
@@ -301,7 +301,7 @@
 
     <section class="info container">
         <div class="info-img">
-            <img src="images/info.png" alt="">
+            <img src="../images/info.png" alt="">
         </div>
         <div class="info-txt">
             <h2>Nosotros</h2>
@@ -322,7 +322,7 @@
             <h2>Información</h2>
             <div class="horario-txt">
                 <div class="txt">
-                    <img class="logo-2" src="images/logo.svg" alt="">
+                    <img class="logo-2" src="../images/logo.svg" alt="">
                 </div>
                 <div class="txt">
                     <h4>Horario</h4>
@@ -339,17 +339,17 @@
                     <div class ="socials">
                         <a href="#">
                             <div class="social">
-                                <img src="images/s1.svg" alt="">
+                                <img src="../images/s1.svg" alt="">
                             </div>
                         </a>
                         <a href="#">
                             <div class="social">
-                                <img src="images/s2.svg" alt="">
+                                <img src="../images/s2.svg" alt="">
                             </div>
                         </a>
                         <a href="#">
                             <div class="social">
-                                <img src="images/s3.svg" alt="">
+                                <img src="../images/s3.svg" alt="">
                             </div>
                         </a>
                     </div>
@@ -359,7 +359,7 @@
     </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script src="../JavaScript/script.js"></script>
+  <script src="../javascript/script.js"></script>
 </body>
 </html>
 

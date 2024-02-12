@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Asados</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="../Css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
@@ -21,7 +21,7 @@
             <nav class="navbar">
                 <div class ="menu-1">
                     <ul>
-                        <li><a href="">Inicio</a></li>
+                        <li><a href="../controller/controlador.php?var1=5">Inicio</a></li>
                         <li><a href="#">Edición</a></li>
                         <li><a href="#">Reportes</a></li>
                     </ul>
@@ -120,6 +120,6 @@
     
 
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script src="../JavaScript/script.js"></script>
+  <script src="../javascript/script.js"></script>
 </body>
 </html>

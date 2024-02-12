@@ -1,7 +1,7 @@
 <?php
 $v1=$_GET['var1'];
 if($v1==1){
-    include("");
+    include("../View/VIinicio.php");
 }
 else 
 if($v1==2){
@@ -17,7 +17,7 @@ if($v1==4){
 }
 else
 if($v1==5){
-    //include("../Model/MReporte.php");
+    include("../View/VInicioAdmin.php");
 }
 else
 {
