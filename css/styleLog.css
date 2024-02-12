@@ -1,5 +1,161 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #080202;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-1{
+    margin-right: 180px;
+}
+
+.menu-2{
+    margin-left: 180px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-1{
+    width: 0;
+}
+
+.logo-2{
+    width: 150px;
+}
+
+.socials {
+    display: flex;
+}
+
+.social {
+    margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #DB241B;
+    border-radius: 50%;
+}
+
+.social:hover{
+    background-color: #DB241B;
+}
+
+.social img{
+    margin: 8px 0 0 10px;
+}
+
+.navbar{
+    display: flex;
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: #ffffff;
+    display: block;
+}
+
+.menu .navbar ul li a:hover{
+    color:#DB241B;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.header-content{
+    margin-top: 200px;
+    padding-bottom: 50px;
+}
+
+.horario{
+    padding: 100px 0px;
+    background-color: #0d0d0d;
+}
+
+.horario-info h2{
+    font-size: 75px;
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.horario-txt{
+    display: flex;
+    justify-content: space-between;
+}
+
+.txt{
+    color: #ffffff;
+}
+
+.txt h4{
+    font-size: 18px;
+    color: #A7A7A7;
+    margin-bottom: 30px;
+}
+
+.txt p{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px; 
+    background-color: #3f3f3fdc;
+    margin-bottom: 50px;
+    width: 100%; 
+}
+
+.links h4{
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.links ul li a{
+    color:#ffffff;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.logo-2{
+    width: 150px;
+}
+
+
 .body-login-registrar {
     margin: 0;
     display: flex;
@@ -23,7 +179,7 @@
 .lbl-login-registrar {
     display: block;
     margin-bottom: 8px;
-    color: #ffffff;
+    color: #00000094;
 }
 
 .input-logi-registrar {
@@ -45,7 +201,7 @@
 }
 
 .btn-login-registrar:hover {
-    background-color: #9c1600;
+    background-color: #9c150031;
 }
 
 .create-account {
@@ -89,7 +245,7 @@
     position: absolute;
     top: 10px;
     left: 10px;
-    color: #ffffff;
+    color:  #DB241B;
 }
 
 .modal-button-registrar{
@@ -106,3 +262,4 @@
 .modal-button-registrar:hover{
     background-color: #9c1600;
 }
+

@@ -43,3 +43,26 @@ tabInputs.forEach(function(input) {
         thisSwiper.swiper.update(); 
     })
 });
+
+
+// Esperar a que el documento esté completamente cargado
+document.addEventListener("DOMContentLoaded", function() {
+    // Obtener el enlace "Menu" dentro de la sección de "Carne"
+    var menuLinkCarne = document.querySelector(".products #tab3 .botones .btn-1[href='#cortes-section']");
+
+    // Agregar un evento de clic al enlace "Menu" en la sección de "Carne"
+    menuLinkCarne.addEventListener("click", function(event) {
+        // Prevenir el comportamiento predeterminado del enlace
+        event.preventDefault();
+
+        // Obtener la posición vertical de la sección "cortes-section"
+        var cortesSection = document.getElementById("cortes-section");
+        var cortesSectionPosition = cortesSection.offsetTop;
+
+        // Desplazar la página hacia la posición de la sección "cortes-section"
+        window.scrollTo({
+            top: cortesSectionPosition,
+            behavior: "smooth"  // Desplazamiento suave
+        });
+    });
+});

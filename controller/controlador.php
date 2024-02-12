@@ -1,7 +1,23 @@
 <?php
 $v1=$_GET['var1'];
 if($v1==1){
+    include("");
+}
+else 
+if($v1==2){
     include("../View/VLogin.php");
+}
+else
+if($v1==3){
+   include("../View/VRegistrar.php");
+}
+else
+if($v1==4){
+    include("../View/VInicioCliente.php");
+}
+else
+if($v1==5){
+    //include("../Model/MReporte.php");
 }
 else
 {

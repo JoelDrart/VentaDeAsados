@@ -7,13 +7,14 @@
   <title>Asados</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="../css/styleLog.css">
+  <link rel="stylesheet" href="../images">
 </head>
 <body>
     <header>
 
     <div class="menu container">
         
-        <img class="logo-1" src="../images/logo.svg" alt="">
+        <img class="logo-1" src="images/logo.svg" alt="">
         <input type="checkbox" id="menu" />
         <label for="menu">
             <img src="images/menu.png" class="menu-icono" alt="">
@@ -56,28 +57,38 @@
 
     <section class="body-login-registrar">
         <div class="container-login-registrar" id="login-container">
-            <h2>Login</h2>
+            <h2>Registrar</h2>
             <br>
-            <form action="../Model/MValidarLogin.php" method="POST">
-                <label class="lbl-login-registrar" for="login-username" >Usuario Id:</label>
-                <input class="input-login-registrar" type="text" id="login-username" name="login-username" required>
-                <label class="lbl-login-registrar" for="login-password">Contraseña:</label>
-                <input class="input-login-registrar" type="password" id="login-password" name="login-password" required>
-                <br>
-                <label class="lbl-login-registrar" for="login-type">Tipo de usuario:</label>
-                <select class="input-login-registrar" id="login-type" name="login-type" required>
+            <form action="../Model/MNuevoUsuario.php" method="POST">
+                <label class="lbl-login-registrar" for="register-username">User name:</label>
+                <input class="input-login-registrar" type="text" id="register-username" name="register-username" required>
+
+                <label class="lbl-login-registrar" for="register-name">Nombre:</label>
+                <input class="input-login-registrar" type="text" id="register-name" name="register-name" required>
+                
+                <label class="lbl-login-registrar" for="register-lastname">Apellido:</label>
+                <input class="input-login-registrar" type="text" id="register-lastname" name="register-lastname">
+                
+                <label class="lbl-login-registrar" for="register-email">Correo Electrónico:</label>
+                <input class="input-login-registrar" type="email" id="register-email" name="register-email" required>
+                
+                <label class="lbl-login-registrar" for="register-phone">Teléfono:</label>
+                <input class="input-login-registrar" type="tel" id="register-phone" name="register-phone" required pattern="[0-9]{10}">
+
+                <label class="lbl-login-registrar" for="register-password">Contraseña:</label>
+                <input class="input-login-registrar" type="password" id="register-password" name="register-password" required>
+                
+                <label class="lbl-login-registrar" for="register-type">Tipo de usuario:</label>
+                <select class="input-login-registrar" id="register-type" name="register-type" required>
                     <option value="1">Admin</option>
                     <option value="2">Cliente</option>
                 </select>
                 <br>
                 <br>
-                <button class="btn-login-registrar" id="login-button" type="submit">Acceder</button>
+                <button class="btn-login-registrar" id="register-button" type="submit">Crear Cuenta</button>
             </form>
-            <br>
-            <a href="../Controller/controlador.php?var1=3">Crear Cuenta</a>
         </div>
     </section>
-
 
     <footer class="horario">
         <div class="horario-info container">
@@ -122,5 +133,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="../JavaScript/scriptLog.js"></script>
+
 </body>
 </html>

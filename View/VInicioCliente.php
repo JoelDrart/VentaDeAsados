@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Asados</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../Css/style.css">
 </head>
 <body>
     <header>
@@ -30,7 +30,7 @@
                 <img class="logo-2" src="images/logo.svg" alt="">
                 <div class="menu-2">
                     <ul>
-                        <li><a href="../grupo/Controller/controlador.php?var1=2">Login</a></li>
+                        <li><a href="">Cliente</a></li>
                     </ul>
                     <div class ="socials">
                         <a href="https://www.facebook.com/esquina.sabor/">
@@ -359,6 +359,7 @@
     </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script src="javascript/script.js"></script>
+  <script src="../JavaScript/script.js"></script>
 </body>
 </html>
+
