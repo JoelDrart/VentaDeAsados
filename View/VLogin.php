@@ -30,7 +30,7 @@
                 <img class="logo-2" src="../images/logo.svg" alt="">
                 <div class="menu-2">
                     <ul>
-                        <li><a href="../View/VLogin.php">Login</a></li>
+                        <li><a href="../View/VLogin.php">Ingresar</a></li>
                     </ul>
                     <div class ="socials">
                         <a href="https://www.facebook.com/esquina.sabor/">

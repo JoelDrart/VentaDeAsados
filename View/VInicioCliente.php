@@ -1,3 +1,11 @@
+<?php
+// Inicia la sesión
+session_start();
+include("../Config/confg.php");
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,6 +37,7 @@
 
                 <img class="logo-2" src="../images/logo.svg" alt="">
                 <div class="menu-2">
+                    
                     <ul>
                         <li><a href="">Cliente</a></li>
                     </ul>
