@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Verificar si la inserción fue exitosa
     if ($resultado) {
-        header("Location: ../View/VInicioCliente.php");
+        header("Location: ../View/VInicio.php");
     } else {
         echo "<h1>Error al insertar los datos en la base de datos: " . mysqli_error($conexion) . "</h1>";
         exit;
