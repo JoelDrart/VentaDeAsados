@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: ../View/VInicioAdmin.php");
             exit;
         } elseif ($tipoUsuarioDB == 2) {
-            header("Location: ../View/VInicioCliente.php");
+            header("Location: ../View/VIinicio.php");
             exit;
         }
     } else {
