@@ -1,6 +1,6 @@
 <?php
 include("../Config/confg.php");
-<link rel="stylesheet" href="../javascript/scriptLog.js">
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtener los datos del formulario
     $usuario = mysqli_real_escape_string($conexion, $_POST['register-username']);
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result_check = mysqli_query($conexion, $sql_check);
     if (mysqli_num_rows($result_check) > 0) {
         // Mostrar mensaje de error en un alert
-        echo "<script>alert('Error: El usuario o el correo electrónico ya están registrados');</script>";
+        echo "<h1>Error: Usuario o contraseña existentes</h1>";
         exit;
     }
 
@@ -35,18 +35,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } elseif ($tipoUsuario == 2) {
             header("Location: ../View/VInicioCliente.php"); // Redirigir a la página de inicio de Usuario
         } else {
-            // Tipo de usuario desconocido, manejar de acuerdo a tus necesidades
-            echo "<script>alert('Error: Tipo de usuario desconocido');</script>";
+            echo "<h1>Error: Tipo de usuario desconocido";
             exit;
         }
     } else {
         // Mostrar mensaje de error en un alert
-        echo "<script>alert('Error al insertar los datos en la base de datos: " . mysqli_error($conexion) . "');</script>";
+        echo "<h1>Error al insertar los datos en la base de datos: " . mysqli_error($conexion) . "</h1>";
         exit;
     }
 } else {
     // Si el formulario no se envió por el método POST, redirigir a alguna página de error o mostrar un mensaje adecuado.
-    echo "<script>alert('Error: Acceso no permitido');</script>";
+    echo "<h1>Error: Acceso no permitido</h1>";
     exit;
 }
 
