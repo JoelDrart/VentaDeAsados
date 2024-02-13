@@ -13,7 +13,7 @@
 
     <div class="menu container">
         
-        <img class="logo-1" src="../images/logo.svg" alt="">
+        <img class="logo-1" src="../images/logo.png" alt="">
         <input type="checkbox" id="menu" />
         <label for="menu">
             <img src="images/menu.png" class="menu-icono" alt="">
@@ -27,7 +27,7 @@
                     </ul>
                 </div>
 
-                <img class="logo-2" src="../images/logo.svg" alt="">
+                <img class="logo-2" src="../images/logo.png" alt="">
                 <div class="menu-2">
                     <ul>
                         <li><a href="../View/VLogin.php">Login</a></li>
@@ -84,7 +84,7 @@
             <h2>Información</h2>
             <div class="horario-txt">
                 <div class="txt">
-                    <img class="logo-2" src="../images/logo.svg" alt="">
+                    <img class="logo-2" src="../images/logo.png" alt="">
                 </div>
                 <div class="txt">
                     <h4>Horario</h4>
