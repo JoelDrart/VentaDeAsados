@@ -1,3 +1,10 @@
+<?php
+// Inicia la sesión
+session_start();
+include("../Config/confg.php");
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +37,22 @@
                 <img class="logo-2" src="../images/logo.png" alt="">
                 <div class="menu-2">
                     <ul>
-                        <li><a href="../controller/controlador.php?var1=2">Login</a></li>
+                        <?php
+                            // Verifica si el usuario está autenticado
+                            if (isset($_SESSION['userId'])) {
+                                // Usuario autenticado
+                                $username = obtenerNombreUsuarioPorId($_SESSION['userId']);
+                                echo "<li><span id='bienvenida'>Bienvenido, $username!</span></li>";
+                                echo "<li><a href='../model/MLogout.php'>Cerrar Sesión</a></li>";
+                            } else {
+                                // Usuario no autenticado
+                                echo '<li><a href="../controller/controlador.php?var1=2">Ingresar</a></li>';
+                            }
+                        ?>
+                        <!-- 
+                            <li><a href="../controller/controlador.php?var1=2">Login</a></li>
+                        </ul> -->
+
                     </ul>
                     <div class ="socials">
                         <a href="https://www.facebook.com/esquina.sabor/">

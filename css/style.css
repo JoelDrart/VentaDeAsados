@@ -58,15 +58,20 @@ body {
 }
 
 .menu-1{
-    margin-right: 180px;
+    margin-right: 100px;
 }
 
 .menu-2{
-    margin-left: 180px;
+    margin-left: 50px;
     display: flex;
     align-items: center;
 }
-
+#bienvenida{
+    font-size: 18px;
+    padding: 20px;
+    color: #ffffff;
+    display: block;
+}
 .logo-1{
     width: 0;
 }

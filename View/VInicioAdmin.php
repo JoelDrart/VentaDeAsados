@@ -33,6 +33,7 @@
                 <div class="menu-2">
                     <ul>
                         <li><a href="">Admin</a></li>
+                        <li><a href='../model/MLogout.php'>Cerrar Sesión</a></li>
                     </ul>
                     <div class ="socials">
                         <a href="https://www.facebook.com/esquina.sabor/">
