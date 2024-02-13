@@ -31,12 +31,17 @@ if($v1==7){
         
     }else{
         include("../View/VReservas.php");
-    }
-    
+    }   
 }
-else if($v1==8){
+else 
+if($v1==8){
     include("../View/VProductos.php");
 }
+else 
+if($v1==9){
+    include("../View/VEliminarCliente.php");
+}
+else
 {
     echo "Ninguna opción";
 }

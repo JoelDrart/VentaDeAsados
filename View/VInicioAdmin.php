@@ -13,7 +13,7 @@
 
         <div class="menu container">
         
-        <img class="logo-1" src="images/logo.png" alt="">
+        <img class="logo-1" src="../images/logo.png" alt="">
         <input type="checkbox" id="menu" />
         <label for="menu">
             <img src="../images/menu.png" class="menu-icono" alt="">

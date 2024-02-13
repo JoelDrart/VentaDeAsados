@@ -58,7 +58,7 @@
         <div class="container-login-registrar" id="login-container">
             <h2>Buscar</h2>
             <br>
-            <form action="../Model/MEditarCliente.php" method="POST">
+            <form action="../Model/MEliminarCliente.php" method="POST">
                 <label class="lbl-login-registrar" for="register-username">User name:</label>
                 <input class="input-login-registrar" type="text" id="register-username" name="register-username" required>
                 <br>

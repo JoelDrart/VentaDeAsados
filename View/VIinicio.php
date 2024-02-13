@@ -22,7 +22,7 @@ include("../Config/confg.php");
 
         <div class="menu container">
         
-        <img class="logo-1" src="images/logo.png" alt="">
+        <img class="logo-1" src="../images/logo.png" alt="">
         <input type="checkbox" id="menu" />
         <label for="menu">
             <img src="../images/menu.png" class="menu-icono" alt="">
@@ -32,7 +32,6 @@ include("../Config/confg.php");
                     <ul>
                         <li><a href="../controller/controlador.php?var1=5">Inicio</a></li>
                         <li><a href="#">Reservaciones</a></li>
-                        <li><a href="../controller/controlador.php?var1=6">Clientes</a></li>
                         <li><a href="../controller/controlador.php?var1=7">Productos</a></li>
                     </ul>
                 </div>
@@ -40,17 +39,18 @@ include("../Config/confg.php");
                 <img class="logo-2" src="../images/logo.png" alt="">
                 <div class="menu-2">
                     <ul>
-                    <?php
-                            // Verifica si el usuario está autenticado
-                            if (isset($_SESSION['userId'])) {
-                                // Usuario autenticado
-                                $username = obtenerNombreUsuarioPorId($_SESSION['userId']);
-                                echo "<li><span id='bienvenida'>Bienvenido, $username!</span></li>";
-                                echo "<li><a href='../model/MLogout.php'>Cerrar Sesión</a></li>";
-                            } else {
-                                // Usuario no autenticado
-                                echo '<li><a href="../controller/controlador.php?var1=2">Ingresar</a></li>';
-                            }
+                        <?php
+                        // Verifica si el usuario está autenticado
+                        if (isset($_SESSION['userId'])) {
+                            // Usuario autenticado
+                            $username = obtenerNombreUsuarioPorId($_SESSION['userId']);
+                            echo "<li><span id='bienvenida'>Bienvenido, $username!</span></li>";
+                            echo "<li><a href='../model/MLogout.php'>Cerrar Sesión</a></li>";
+                            echo "<li><a href="'../Model/MEditarClientes.php'">Clientes</a></li>";
+                        } else {
+                            // Usuario no autenticado
+                            echo '<li><a href="../controller/controlador.php?var1=2">Ingresar</a></li>';
+                        }
                         ?>
                     </ul>
                     <div class ="socials">
@@ -87,7 +87,7 @@ include("../Config/confg.php");
                                 <p style="text-align: left">Sumérgete en un mundo de sabores intensos y aromas irresistibles.</p>
 
                                 <div class="botones">
-                                    <a href="#" class="btn-1">Comprar</a>
+                                    <a href="#" class="btn-1">Reservar</a>
                                 </div>
                             </div>
                             <div class="slider-img">
@@ -104,7 +104,7 @@ include("../Config/confg.php");
                                 <p style="text-align: justify">con la más fina carne de res y una selección de </p>
                                 <p style="text-align: justify">ingredientes frescos y deliciosos.</p>
                                 <div class="botones">
-                                    <a href="#" class="btn-1">Menu</a>
+                                    <a href="#" class="btn-1">Reservar</a>
                                 </div>
                             </div>
                             <div class="slider-img">
@@ -122,7 +122,7 @@ include("../Config/confg.php");
                                 <p style="text-align: justify">una experiencia gastronómica inigualable.</p>
                                     
                                 <div class="botones">
-                                    <a href="#" class="btn-1">Menu</a>
+                                    <a href="#" class="btn-1">Reservar</a>
                                 </div>
                             </div>
                             <div class="slider-img">
