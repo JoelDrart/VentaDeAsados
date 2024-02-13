@@ -13,18 +13,25 @@
 
         <div class="menu container">
         
-        <img class="logo-1" src="images/logo.png" alt="">
+        <img class="logo-1" src="../images/logo.png" alt="">
         <input type="checkbox" id="menu" />
         <label for="menu">
             <img src="../images/menu.png" class="menu-icono" alt="">
         </label>
             <nav class="navbar">
-                <div class ="menu-1">
+            <div class ="menu-1">
                     <ul>
                         <li><a href="../controller/controlador.php?var1=6">Usuarios</a></li>
+<<<<<<< HEAD
                         <li><a href="../View/VIngresarPlato.php">Productos</a></li>
                         <li><a href="#">Ventas</a></li>
                         <li><a href="#">Reportes</a></li>
+=======
+                        <li><a href=""></a> </li>
+                        <li><a href=""></a> </li>
+                        <li><a href=""></a> </li>
+                        <li><a href=""></a> </li>
+>>>>>>> 81aa3d2c32cf5c29c3fd86cfa7cc8096d30349ca
                     </ul>
                 </div>
 
@@ -46,17 +53,17 @@
                     <div class="swiper-slide">
                         <div class="slider">
                             <div class="slider-txt">
-                                <h1>Carne</h1>
-                                <p style="text-align: left">Carne de primera calidad, sabor auténtico y textura.</p>
-                                <p style="text-align: left">Con un bocado será una experiencia única que deleitará tus sentidos. </p>
-                                <p style="text-align: left">Sumérgete en un mundo de sabores intensos y aromas irresistibles.</p>
-
+                                <h1>CLIENTES</h1>
+                                <p style="text-align: left">Ingresar nuevos Clientes</p>
+                                <p style="text-align: left">Mostrar los clientes</p>
+                                <p style="text-align: left">Eliminar Clientes</p>
+                                <p style="text-align: left">Editar Clientes</p>
                                 <div class="botones">
-                                    <a href="#" class="btn-1">Comprar</a>
+                                    <a href="../controller/controlador.php?var1=6" class="btn-1">Ingresar</a>
                                 </div>
                             </div>
                             <div class="slider-img">
-                                <img src="../images/slider2.png" alt="">
+                                <img src="../images/cliente.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -64,16 +71,17 @@
                     <div class="swiper-slide">
                         <div class="slider">
                             <div class="slider-txt">
-                                <h1>Hamburguesas</h1>
-                                <p style="text-align: justify">Disfruta de nuestras hamburguesas gourmet, elaboradas </p>
-                                <p style="text-align: justify">con la más fina carne de res y una selección de </p>
-                                <p style="text-align: justify">ingredientes frescos y deliciosos.</p>
+                                <h1>PRODUCTOS</h1>
+                                <p style="text-align: left">Ingresar nuevos Productos</p>
+                                <p style="text-align: left">Mostrar Productos</p>
+                                <p style="text-align: left">Eliminar Productos</p>
+                                <p style="text-align: left">Editar  Productos</p>
                                 <div class="botones">
-                                    <a href="#" class="btn-1">Menu</a>
+                                    <a href="#" class="btn-1">Ingresar</a>
                                 </div>
                             </div>
                             <div class="slider-img">
-                                <img src="../images/slider1.png" alt="">
+                                <img src="../images/producto.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -81,21 +89,45 @@
                     <div class="swiper-slide">
                         <div class="slider">
                             <div class="slider-txt">
-                                <h1>Tablitas</h1>
-                                <p style="text-align: justify">Nuestras tablitas son una deliciosa combinación </p>
-                                <p style="text-align: justify">de embutidos, carnes, pollo y papas, ofreciendo
-                                <p style="text-align: justify">una experiencia gastronómica inigualable.</p>
+                                <h1>Ventas</h1>
+                                <p style="text-align: left">Mostrar Ventas</p>
+                                <p style="text-align: left">Eliminar Ventas</p>
+                                <p style="text-align: left">Editar  Ventas</p>
                                     
                                 <div class="botones">
-                                    <a href="#" class="btn-1">Menu</a>
+                                    <a href="#" class="btn-1">Ingresar</a>
                                 </div>
                             </div>
                             <div class="slider-img">
-                                <img src="../images/slider3.png" alt="">
+                                <img src="../images/venta.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div class="slider-txt">
+                                <h1>Reportes</h1>
+                                <p style="text-align: left">Reporte de productos</p>
+                                <p style="text-align: left">Reporte de reservas</p>
+                                <p style="text-align: left">Reporte de platos</p>
+                                <p style="text-align: left">Reporte de .....</p>
+                                <p style="text-align: left">Reporte de .....</p>
+                                <p style="text-align: left">Reporte de .....</p>
+                                    
+                                <div class="botones">
+                                    <a href="#" class="btn-1">Ingresar</a>
+                                </div>
+                            </div>
+                            <div class="slider-img">
+                                <img src="../images/reporte.jpg" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
+
+                </div>
+
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>

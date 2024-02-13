@@ -16,7 +16,7 @@ $sql = "UPDATE Users SET nombreUsuario='$nombreUsuario', nombre='$nombre', apell
 $resultado = mysqli_query($conexion, $sql);
 
 if ($resultado) {
-    header("location:../View/VLogin.php");
+    header("location:../View/VInicioAdmin.php");
 } else {
     echo "Error al Editar";
 }
