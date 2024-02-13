@@ -34,7 +34,9 @@ if($v1==7){
     }
     
 }
-else
+else if($v1==8){
+    include("../View/VProductos.php");
+}
 {
     echo "Ninguna opción";
 }
