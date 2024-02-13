@@ -4,12 +4,11 @@ include("../Config/confg.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtener los datos del formulario
     $usuario = $_POST['register-username'];
-    $contraseña = $_POST['register-password'];
 
     // Verificar si existen el register-username y register-password
-    if (isset($usuario) && isset($contraseña)) {
+    if (isset($usuario)) {
         // Consultar todos los datos del usuario
-        $sql = "SELECT * FROM Users WHERE nombreUsuario='$usuario' AND clave ='$contraseña'";
+        $sql = "SELECT * FROM Users WHERE nombreUsuario='$usuario'";
         $resultado = mysqli_query($conexion, $sql);
 
         $filas = mysqli_num_rows($resultado);
@@ -25,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $clave = $usuario_info['clave'];
             $tipoUsuario = $usuario_info['tipoUsuario'];
 
-            // Mostrar el formulario para editar los datos del usuario
+            // Mostrar el formulario para eliminar
             ?>
             <!DOCTYPE html>
             <html lang="en">
@@ -37,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <link rel="stylesheet" href="../css/styleEditar.css">
             </head>
             <body>
-                <form action="../model/MActualizar.php" method="POST">
+                <form action="../model/MEliminar.php" method="POST">
                     <h1>DATOS DEL USUARIO</h1>
                     <table border="1">
                         <tr>
@@ -52,38 +51,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </tr>
                         <tr>
                             <td><input type="text" size="4" name="userId" value="<?php echo $userId; ?>" readonly /></td>
-                            <td><input type="text" name="nombreUsuario" value="<?php echo $usuario; ?>" /></td>
-                            <td><input type="text" name="nombre" value="<?php echo $nombre; ?>" /></td>
-                            <td><input type="text" name="apellido" value="<?php echo $apellido; ?>" /></td>
-                            <td><input type="text" name="email" value="<?php echo $email; ?>" /></td>
-                            <td><input type="text" name="telefono" value="<?php echo $telefono; ?>" /></td>
-                            <td><input type="text" name="clave" value="<?php echo $clave; ?>" /></td>
-                            <td>
-                                <select name="tipoUsuario">
-                                    <option value="1" <?php if ($tipoUsuario == 1) echo "selected"; ?>>Admin</option>
-                                    <option value="2" <?php if ($tipoUsuario == 2) echo "selected"; ?>>Cliente</option>
-                                </select>
-                            </td>
+                            <td><input type="text" name="nombreUsuario" value="<?php echo $usuario; ?>" readonly /></td>
+                            <td><input type="text" name="nombre" value="<?php echo $nombre; ?>" readonly /></td>
+                            <td><input type="text" name="apellido" value="<?php echo $apellido; ?>" readonly /></td>
+                            <td><input type="text" name="email" value="<?php echo $email; ?>" readonly /></td>
+                            <td><input type="text" name="telefono" value="<?php echo $telefono; ?>" readonly /></td>
+                            <td><input type="text" name="clave" value="<?php echo $clave; ?>" readonly /></td>
+                            <td><input type="text" name="clave" value="<?php echo $tipoUsuario; ?>" readonly /></td>
                         </tr>
                     </table>
-                    <input type="submit" value="Editar">
+                    <input type="submit" value="Eliminar">
                 </form>
             </body>
             </html>
             <?php
         } else {
-            echo "<h1>Error: Usuario o contraseña incorrectos</h1>";
+            echo "<h1>Error: Usuario incorrecto</h1>";
         }
 
         mysqli_free_result($resultado);
         mysqli_close($conexion);
     } else {
-        echo "<script>alert('Error: Debes ingresar un usuario y contraseña');</script>";
+        echo "<h1>Error: Debes ingresar un usuario</h1>";
         exit;
     }
 } else {
-    // Si el formulario no se envió por el método POST, redirigir a alguna página de error o mostrar un mensaje adecuado.
-    echo "<script>alert('Error: Acceso no permitido');</script>";
+    echo "<h1>Error: Acceso no permitido</h1>";
     exit;
 }
 ?>

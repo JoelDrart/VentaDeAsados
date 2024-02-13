@@ -63,7 +63,7 @@
                 <input class="input-login-registrar" type="text" id="register-username" name="register-username" required>
                 <br>
                 <br>
-                <button class="btn-login-registrar" id="register-button" type="submit">Editar Cuenta</button>
+                <button class="btn-login-registrar" id="register-button" type="submit">Eliminar Cuenta</button>
             </form>
         </div>
     </section>

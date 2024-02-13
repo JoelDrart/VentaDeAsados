@@ -31,10 +31,9 @@ include("../Config/confg.php");
                 <div class ="menu-1">
                     <ul>
                         <li><a href="../controller/controlador.php?var1=5">Inicio</a></li>
+                        <li><a href="#">Reservaciones</a></li>
                         <li><a href="../controller/controlador.php?var1=6">Clientes</a></li>
                         <li><a href="../controller/controlador.php?var1=7">Productos</a></li>
-                        <li><a href="#">Ventas</a></li>
-                        <li><a href="#">Reportes</a></li>
                     </ul>
                 </div>
 
