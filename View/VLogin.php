@@ -64,11 +64,11 @@
                 <label class="lbl-login-registrar" for="login-password">Contraseña:</label>
                 <input class="input-login-registrar" type="password" id="login-password" name="login-password" required>
                 <br>
-                <label class="lbl-login-registrar" for="login-type">Tipo de usuario:</label>
+                <!-- <label class="lbl-login-registrar" for="login-type">Tipo de usuario:</label>
                 <select class="input-login-registrar" id="login-type" name="login-type" required>
                     <option value="1">Admin</option>
                     <option value="2">Cliente</option>
-                </select>
+                </select> -->
                 <br>
                 <br>
                 <button class="btn-login-registrar" id="login-button" type="submit">Acceder</button>

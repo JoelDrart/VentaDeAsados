@@ -77,11 +77,11 @@
                 <label class="lbl-login-registrar" for="register-password">Contraseña:</label>
                 <input class="input-login-registrar" type="password" id="register-password" name="register-password" required>
                 
-                <label class="lbl-login-registrar" for="register-type">Tipo de usuario:</label>
+                <!-- <label class="lbl-login-registrar" for="register-type">Tipo de usuario:</label>
                 <select class="input-login-registrar" id="register-type" name="register-type" required>
                     <option value="1">Admin</option>
                     <option value="2">Cliente</option>
-                </select>
+                </select> -->
                 <br>
                 <br>
                 <button class="btn-login-registrar" id="register-button" type="submit">Crear Cuenta</button>
