@@ -58,11 +58,11 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Imágen</th>
                 <th scope="col">Plato</th>
                 <th scope="col">Descripción</th>
                 <th scope="col">Precio</th>
                 <th scope="col">Tipo</th>
+                <th scope="col"><center>Control</center></th>
             </tr>
   </thead>
     <tbody>
