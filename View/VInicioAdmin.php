@@ -22,9 +22,10 @@
             <div class ="menu-1">
                     <ul>
                         <li><a href="../controller/controlador.php?var1=6">Usuarios</a></li>
-                        <li><a href="../controller/controlador.php?var1=6">Clientes</a></li>
-                        <li><a href="#">Productos</a></li>
-                        <li><a href="#">Reportes</a></li>
+                        <li><a href=""></a> </li>
+                        <li><a href=""></a> </li>
+                        <li><a href=""></a> </li>
+                        <li><a href=""></a> </li>
                     </ul>
                 </div>
 
