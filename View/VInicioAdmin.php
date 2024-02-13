@@ -22,16 +22,13 @@
             <div class ="menu-1">
                     <ul>
                         <li><a href="../controller/controlador.php?var1=6">Usuarios</a></li>
-<<<<<<< HEAD
                         <li><a href="../View/VIngresarPlato.php">Productos</a></li>
                         <li><a href="#">Ventas</a></li>
                         <li><a href="#">Reportes</a></li>
-=======
                         <li><a href=""></a> </li>
                         <li><a href=""></a> </li>
                         <li><a href=""></a> </li>
                         <li><a href=""></a> </li>
->>>>>>> 81aa3d2c32cf5c29c3fd86cfa7cc8096d30349ca
                     </ul>
                 </div>
 
@@ -77,7 +74,7 @@
                                 <p style="text-align: left">Eliminar Productos</p>
                                 <p style="text-align: left">Editar  Productos</p>
                                 <div class="botones">
-                                    <a href="#" class="btn-1">Ingresar</a>
+                                    <a href="../View/VIngresarPlato.php" class="btn-1">Ingresar</a>
                                 </div>
                             </div>
                             <div class="slider-img">
