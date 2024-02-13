@@ -46,7 +46,7 @@ include("../Config/confg.php");
                             $username = obtenerNombreUsuarioPorId($_SESSION['userId']);
                             echo "<li><span id='bienvenida'>Bienvenido, $username!</span></li>";
                             echo "<li><a href='../model/MLogout.php'>Cerrar Sesión</a></li>";
-                            echo "<li><a href="'../Model/MEditarClientes.php'">Clientes</a></li>";
+                            echo "<li><a href='../Model/MEditarClientes.php'>Clientes</a></li>";
                         } else {
                             // Usuario no autenticado
                             echo '<li><a href="../controller/controlador.php?var1=2">Ingresar</a></li>';
