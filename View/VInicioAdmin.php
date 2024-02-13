@@ -21,7 +21,6 @@
             <nav class="navbar">
                 <div class ="menu-1">
                     <ul>
-                        <li><a href="../controller/controlador.php?var1=5">Inicio</a></li>
                         <li><a href="../controller/controlador.php?var1=6">Clientes</a></li>
                         <li><a href="#">Productos</a></li>
                         <li><a href="#">Ventas</a></li>
@@ -31,27 +30,11 @@
 
                 <img class="logo-2" src="../images/logo.png" alt="">
                 <div class="menu-2">
-                    <ul>
+                    <ul><li><a href="../controller/controlador.php?var1=5">Inicio</a></li>
                         <li><a href="">Admin</a></li>
                         <li><a href='../model/MLogout.php'>Cerrar Sesión</a></li>
                     </ul>
-                    <div class ="socials">
-                        <a href="https://www.facebook.com/esquina.sabor/">
-                            <div class="social">
-                                <img src="../images/s1.svg" alt="">
-                            </div>
-                        </a>
-                        <a href="https://www.tiktok.com/@esquinadelsabor7">
-                            <div class="social">
-                                <img src="../images/s2.svg" alt="">
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="social">
-                                <img src="../images/s3.svg" alt="">
-                            </div>
-                        </a>
-                    </div>
+                    
                 </div>
             </nav>
         </div>

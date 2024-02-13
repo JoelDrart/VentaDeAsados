@@ -16,11 +16,13 @@ include("../Config/confg.php");
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+
+
     <header>
 
         <div class="menu container">
         
-        <img class="logo-1" src="../images/logo.png" alt="">
+        <img class="logo-1" src="images/logo.png" alt="">
         <input type="checkbox" id="menu" />
         <label for="menu">
             <img src="../images/menu.png" class="menu-icono" alt="">
@@ -28,16 +30,18 @@ include("../Config/confg.php");
             <nav class="navbar">
                 <div class ="menu-1">
                     <ul>
-                        <li><a href="../controller/controlador.php?var1=1">Inicio</a></li>
-                        <li><a href="#">Reservaciones</a></li>
-                        <li><a href="#">Menu</a></li>
+                        <li><a href="../controller/controlador.php?var1=5">Inicio</a></li>
+                        <li><a href="../controller/controlador.php?var1=6">Clientes</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Ventas</a></li>
+                        <li><a href="#">Reportes</a></li>
                     </ul>
                 </div>
 
                 <img class="logo-2" src="../images/logo.png" alt="">
                 <div class="menu-2">
                     <ul>
-                        <?php
+                    <?php
                             // Verifica si el usuario está autenticado
                             if (isset($_SESSION['userId'])) {
                                 // Usuario autenticado
@@ -49,10 +53,6 @@ include("../Config/confg.php");
                                 echo '<li><a href="../controller/controlador.php?var1=2">Ingresar</a></li>';
                             }
                         ?>
-                        <!-- 
-                            <li><a href="../controller/controlador.php?var1=2">Login</a></li>
-                        </ul> -->
-
                     </ul>
                     <div class ="socials">
                         <a href="https://www.facebook.com/esquina.sabor/">
@@ -89,7 +89,6 @@ include("../Config/confg.php");
 
                                 <div class="botones">
                                     <a href="#" class="btn-1">Comprar</a>
-                                    <a href="#cortes-section" class="btn-1">Menu</a> <!-- Modificar el href para que apunte al id "cortes-section" -->
                                 </div>
                             </div>
                             <div class="slider-img">
@@ -106,7 +105,6 @@ include("../Config/confg.php");
                                 <p style="text-align: justify">con la más fina carne de res y una selección de </p>
                                 <p style="text-align: justify">ingredientes frescos y deliciosos.</p>
                                 <div class="botones">
-                                    <a href="#" class="btn-1">Comprar</a>
                                     <a href="#" class="btn-1">Menu</a>
                                 </div>
                             </div>
@@ -124,9 +122,7 @@ include("../Config/confg.php");
                                 <p style="text-align: justify">de embutidos, carnes, pollo y papas, ofreciendo
                                 <p style="text-align: justify">una experiencia gastronómica inigualable.</p>
                                     
-                                
                                 <div class="botones">
-                                    <a href="#" class="btn-1">Comprar</a>
                                     <a href="#" class="btn-1">Menu</a>
                                 </div>
                             </div>
