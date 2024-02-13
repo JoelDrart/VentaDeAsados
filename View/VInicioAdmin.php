@@ -13,7 +13,7 @@
 
         <div class="menu container">
         
-        <img class="logo-1" src="images/logo.png" alt="">
+        <img class="logo-1" src="../images/logo.png" alt="">
         <input type="checkbox" id="menu" />
         <label for="menu">
             <img src="../images/menu.png" class="menu-icono" alt="">
@@ -24,7 +24,6 @@
                         <li><a href="../controller/controlador.php?var1=6">Usuarios</a></li>
                         <li><a href="../controller/controlador.php?var1=6">Clientes</a></li>
                         <li><a href="#">Productos</a></li>
-                        <li><a href="#">Ventas</a></li>
                         <li><a href="#">Reportes</a></li>
                     </ul>
                 </div>

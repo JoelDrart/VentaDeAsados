@@ -4,12 +4,11 @@ include("../Config/confg.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtener los datos del formulario
     $usuario = $_POST['register-username'];
-    $contraseña = $_POST['register-password'];
 
     // Verificar si existen el register-username y register-password
-    if (isset($usuario) && isset($contraseña)) {
+    if (isset($usuario)) {
         // Consultar todos los datos del usuario
-        $sql = "SELECT * FROM Users WHERE nombreUsuario='$usuario' AND clave ='$contraseña'";
+        $sql = "SELECT * FROM Users WHERE nombreUsuario='$usuario'";
         $resultado = mysqli_query($conexion, $sql);
 
         $filas = mysqli_num_rows($resultado);
@@ -58,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <td><input type="text" name="email" value="<?php echo $email; ?>" /></td>
                             <td><input type="text" name="telefono" value="<?php echo $telefono; ?>" /></td>
                             <td><input type="text" name="clave" value="<?php echo $clave; ?>" /></td>
-                            <td><input type="text" name="clave" value="<?php echo $tipoUsuario; ?>"readonly /></td>
+                            <td><input type="text" name="tipoUsuario" value="<?php echo $tipoUsuario; ?>"readonly /></td>
                         </tr>
                     </table>
                     <input type="submit" value="Editar">

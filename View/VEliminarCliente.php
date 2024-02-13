@@ -12,10 +12,10 @@
 <header>
 
     <div class="menu container">
-        <img class="logo-1" src="images/logo.png" alt="">
+        <img class="logo-1" src="../images/logo.png" alt="">
         <input type="checkbox" id="menu" />
         <label for="menu">
-            <img src="images/menu.png" class="menu-icono" alt="">
+            <img src="../images/menu.png" class="menu-icono" alt="">
         </label>
         <nav class="navbar">
             <div class ="menu-1">
@@ -23,7 +23,6 @@
                     <li><a href="../controller/controlador.php?var1=5">Inicio</a></li>
                     <li><a href="../controller/controlador.php?var1=6">Edición</a></li>
                     <li><a href="../controller/controlador.php?var1=9">Eliminación</a></li>
-                    <li><a href="#">Reportes</a></li>
                 </ul>
             </div>
 
@@ -58,7 +57,7 @@
         <div class="container-login-registrar" id="login-container">
             <h2>Buscar</h2>
             <br>
-            <form action="../Model/MEditarCliente.php" method="POST">
+            <form action="../Model/MEliminarCliente.php" method="POST">
                 <label class="lbl-login-registrar" for="register-username">User name:</label>
                 <input class="input-login-registrar" type="text" id="register-username" name="register-username" required>
                 <br>

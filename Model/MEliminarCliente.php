@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtener los datos del formulario
     $usuario = $_POST['register-username'];
 
-    // Verificar si existen el register-username y register-password
+    // Verificar si existe el register-username
     if (isset($usuario)) {
         // Consultar todos los datos del usuario
         $sql = "SELECT * FROM Users WHERE nombreUsuario='$usuario'";
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <meta charset="UTF-8">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Editar Usuario</title>
+                <title>Eliminar Usuario</title>
                 <link rel="stylesheet" href="../css/styleEditar.css">
             </head>
             <body>
@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <td><input type="text" name="email" value="<?php echo $email; ?>" readonly /></td>
                             <td><input type="text" name="telefono" value="<?php echo $telefono; ?>" readonly /></td>
                             <td><input type="text" name="clave" value="<?php echo $clave; ?>" readonly /></td>
-                            <td><input type="text" name="clave" value="<?php echo $tipoUsuario; ?>" readonly /></td>
+                            <td><input type="text" name="tipoUsuario" value="<?php echo $tipoUsuario; ?>" readonly /></td>
                         </tr>
                     </table>
                     <input type="submit" value="Eliminar">
