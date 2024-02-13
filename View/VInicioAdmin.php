@@ -30,15 +30,15 @@
 
                 <img class="logo-2" src="../images/logo.png" alt="">
                 <div class="menu-2">
-                    <ul><li><a href="../controller/controlador.php?var1=5">Inicio</a></li>
+                    <ul>
                         <li><a href="">Admin</a></li>
+                        <li><a href="../controller/controlador.php?var1=5">Inicio</a></li>
                         <li><a href='../model/MLogout.php'>Cerrar Sesión</a></li>
                     </ul>
-                    
                 </div>
             </nav>
         </div>
-
+        
         <div class ="header-content container">
             <div class ="swiper mySwiper-1">
                 <div class="swiper-wrapper">
