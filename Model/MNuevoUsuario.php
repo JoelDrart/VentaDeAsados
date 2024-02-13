@@ -15,7 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql_check = "SELECT * FROM Users WHERE nombreUsuario='$usuario' OR email='$email'";
     $result_check = mysqli_query($conexion, $sql_check);
     if (mysqli_num_rows($result_check) > 0) {
-        // Mostrar mensaje de error en un alert
         echo "<h1>Error: Usuario o contraseña existentes</h1>";
         exit;
     }
