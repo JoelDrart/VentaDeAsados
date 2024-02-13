@@ -16,7 +16,7 @@ if($v1==3){
 }
 else
 if($v1==4){
-    include("../View/VInicioCliente.php");
+    
 }
 else
 if($v1==5){
