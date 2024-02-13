@@ -60,6 +60,7 @@
     <center>
         <h1>PLATOS INGRESADOS</h1>
     </center>
+    <br>
     <table class="table">
         <thead>
             <tr>
