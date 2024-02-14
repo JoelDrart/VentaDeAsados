@@ -38,21 +38,20 @@ include("../Config/confg.php");
 
                 <img class="logo-2" src="../images/logo.png" alt="">
                 <div class="menu-2">
-                    <ul>
-                        <?php
-                        // Verifica si el usuario está autenticado
-                        if (isset($_SESSION['userId'])) {
-                            // Usuario autenticado
-                            $username = obtenerNombreUsuarioPorId($_SESSION['userId']);
-                            echo "<li><span id='bienvenida'>Bienvenido, $username!</span></li>";
-                            echo "<li><a href='../model/MLogout.php'>Cerrar Sesión</a></li>";
-                            echo "<li><a href='../Model/MEditarClientes.php'>Clientes</a></li>";
-                        } else {
-                            // Usuario no autenticado
-                            echo '<li><a href="../controller/controlador.php?var1=2">Ingresar</a></li>';
-                        }
-                        ?>
-                    </ul>
+                <ul>
+                    <?php
+                    // Verifica si el usuario está autenticado
+                    if (isset($_SESSION['userId'])) {
+                        // Usuario autenticado
+                        $username = obtenerNombreUsuarioPorId($_SESSION['userId']);
+                        echo "<li><span id='bienvenida'>Bienvenido, $username!</span></li>";
+                        echo "<li><a href='../model/MLogout.php'>Cerrar Sesión</a></li>";
+                    }else {
+                        // Usuario no autenticado ni registrado
+                        echo '<li><a href="../controller/controlador.php?var1=2">Ingresar</a></li>';
+                    }
+                    ?>
+                </ul>
                     <div class ="socials">
                         <a href="https://www.facebook.com/esquina.sabor/">
                             <div class="social">
