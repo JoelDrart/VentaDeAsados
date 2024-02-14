@@ -31,7 +31,9 @@ include("../Config/confg.php");
                 <div class ="menu-1">
                     <ul>
                         <li><a href="../controller/controlador.php?var1=1">Inicio</a></li>
-                        <li><a href="#">Reservaciones</a></li>
+
+                        <li><a href="../controller/controlador.php?var1=7">Reservaciones</a></li>
+                        <li><a href="#">Menu</a></li>
                         <li><a href="../controller/controlador.php?var1=8">Productos</a></li>
                     </ul>
                 </div>
@@ -44,9 +46,9 @@ include("../Config/confg.php");
                         if (isset($_SESSION['userId'])) {
                             // Usuario autenticado
                             $username = obtenerNombreUsuarioPorId($_SESSION['userId']);
-                            echo "<li><span id='bienvenida'>Bienvenido, $username!</span></li>";
+                            echo "<li><span id='bienvenida'>¡Bienvenido, $username!</span></li>";
                             echo "<li><a href='../model/MLogout.php'>Cerrar Sesión</a></li>";
-                            echo "<li><a href='../Model/MEditarClientes.php'>Clientes</a></li>";
+                            
                         } else {
                             // Usuario no autenticado
                             echo '<li><a href="../controller/controlador.php?var1=2">Ingresar</a></li>';

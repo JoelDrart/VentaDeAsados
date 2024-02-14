@@ -26,14 +26,13 @@ if($v1==6){
     include("../View/VEditarClientes.php");
 }
 if($v1==7){
-    if (!isset($_SESSION['userId'])) {
-        echo "<h1>Error: Acceso no permitido</h1>";
-        
-    }else{
+    include("../View/VReservas.php");
+    // if (!isset($_SESSION['userId'])) {
+    //     echo "<h1>Error: Acceso no permitido</h1>";
+
+}else{
         include("../View/VReservas.php");
-    }   
-}
-else 
+    }
 if($v1==8){
     include("../View/VProductos.php");
 }
