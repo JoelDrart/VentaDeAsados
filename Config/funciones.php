@@ -26,5 +26,18 @@ function esAdmin($userId) {
         return false;
     }
 }
+function obtenerNombrePlatoPorId($platoId) {
+    global $conexion;
+    
+    $sql = "SELECT nombrePlato FROM Plato WHERE platoId = $platoId";
+    $resultado = $conexion->query($sql);
+
+    if ($resultado->num_rows > 0) {
+        $fila = $resultado->fetch_assoc();
+        return $fila["nombrePlato"];
+    } else {
+        return "Plato no encontrado";
+    }
+}
 
 ?>

@@ -15,6 +15,7 @@ while ($mostrar = mysqli_fetch_array($resultado)) { //recorrer el arreglo $resul
             <p style="color:white;" class="card-text"><?php echo $mostrar['descripcionPlato']?></p>
             <p style="color:white;" class="card-text"><b>$<?php echo $mostrar['precio']?></b></p>
             <a href="../controller/controlador.php?var1=7" class="btn btn-primary">Reservar</a>
+            <a href="../View/VOpinar.php?idPlato=<?php echo $mostrar['platoId'] ?>" class="btn btn-primary">Puntúame</a>
         </div>
         </div>
 
