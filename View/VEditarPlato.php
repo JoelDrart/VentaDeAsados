@@ -46,8 +46,17 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleEditar.css">
     <title>Editar plato</title>
+    <?php
+// Inicia la sesión
+session_start();
+include("../Config/funciones.php");
+
+?>
 </head>
 <body>
+<?php if (isset($_SESSION['userId']) && esAdmin($_SESSION['userId'])): ?>
+
+<!-- el usuario está autenticado -->
     <section class="IngresoP" >
     
             <h1>Editar plato</h1>
@@ -65,7 +74,7 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
                 </div>
                 <div class="mb-3">
                     <label for="precioP" class="form-label">Precio del plato</label>
-                    <input type="number" class="form-control" id="precioP" name="precioP" step="0.01" min="0.00" value="<?php echo $precioPlato; ?>" required>
+                    <input type="number" class="form-control" id="precioP" name="precioP" step="0.01" min="0.50" max="40.00" value="<?php echo $precioPlato; ?>" required>
                 </div>
                 <div class="mb-3">
                     <label for="tipoP" class="form-label">Tipo del plato</label>
@@ -96,5 +105,9 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
             </form>
         </div>
     </section>
+        <?php else: ?>
+            <!-- el usuario no está autenticado -->
+            <h2 style="color:white;">Debe iniciar sesión y ser ADMINISTRADOR para ver esta seccion.</h2>
+        <?php endif; ?>
 </body>
 </html>

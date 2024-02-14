@@ -7,8 +7,17 @@
   <title>Asados</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="../css/style.css">
+  <?php
+// Inicia la sesión
+session_start();
+include("../Config/funciones.php");
+
+?>
 </head>
 <body>
+<?php if (isset($_SESSION['userId']) && esAdmin($_SESSION['userId'])): ?>
+
+<!-- el usuario está autenticado -->
     <header>
 
         <div class="menu container">
@@ -132,7 +141,10 @@
         </div>
     </header>
 
-    
+    <?php else: ?>
+            <!-- el usuario no está autenticado -->
+            <h2 style="color:white;">Debe iniciar sesión y ser ADMINISTRADOR para ver esta seccion.</h2>
+        <?php endif; ?>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="../javascript/script.js"></script>

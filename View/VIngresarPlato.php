@@ -8,10 +8,19 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleEditar.css">
     <title>Ingresar platos</title>
+    <?php
+// Inicia la sesión
+session_start();
+include("../Config/funciones.php");
+
+?>
 </head>
 <body>
-    <section class = "IngresoP">
+<?php if (isset($_SESSION['userId']) && esAdmin($_SESSION['userId'])): ?>
 
+            <!-- el usuario está autenticado -->
+            <section class = "IngresoP">
+    
     <div class="Inp_P">
     <center>
         <h1>INGRESO DE PLATOS</h1>
@@ -29,7 +38,7 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Precio del plato</label>
-            <input type="number" class="form-control" id="" name="precioP" step="0.01" min="0.00" required>
+            <input type="number" class="form-control" id="" name="precioP" step="0.01" min="0.50" max="40.00" required>
         <!--<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>--> 
         </div>
         <select class="form-select" aria-label="Default select example" name="tipoP" required>
@@ -81,7 +90,12 @@
     </tbody>
 </table>
     </div>
-    </section>
+    </section>           
 
+        <?php else: ?>
+            <!-- el usuario no está autenticado -->
+            <h2 style="color:white;">Debe iniciar sesión y ser ADMINISTRADOR para ver esta seccion.</h2>
+        <?php endif; ?>
+    
 </body>
 </html>
