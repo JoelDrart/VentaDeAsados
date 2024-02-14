@@ -79,3 +79,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #BA1B0F;
 }
+
+.IngresoP{
+    color: white !important;
+}
