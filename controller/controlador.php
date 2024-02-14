@@ -68,7 +68,7 @@ if($v1==15){
 else
 if($v1==21){
     // AYUDAAA AQUIIIIIII
-    // include("../Model/MReporte5.php");
+     include("../View/VAyuda.php");
 }
 else
 {
