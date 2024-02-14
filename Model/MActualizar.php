@@ -12,7 +12,7 @@ $clave = $_POST['clave'];
 $tipoUsuario = $_POST['tipoUsuario'];
 
 // Actualizar los datos del usuario en la base de datos
-$sql = "UPDATE Users SET nombreUsuario='$nombreUsuario', nombre='$nombre', apellido='$apellido', email='$email', telefono='$telefono', clave='$clave', tipoUsuario=$tipoUsuario WHERE userId=$userId";
+$sql = "UPDATE users SET nombreUsuario='$nombreUsuario', nombre='$nombre', apellido='$apellido', email='$email', telefono='$telefono', clave='$clave', tipoUsuario=$tipoUsuario WHERE userId=$userId";
 $resultado = mysqli_query($conexion, $sql);
 
 if ($resultado) {

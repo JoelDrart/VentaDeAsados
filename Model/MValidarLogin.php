@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $contraseña = $_POST['login-password'];
     // $tipoUsuario = $_POST['login-type']; // Utilizar el campo login-type
 
-    $sql = "SELECT * FROM Users WHERE nombreUsuario='$usuario' AND clave ='$contraseña'";
+    $sql = "SELECT * FROM users WHERE nombreUsuario='$usuario' AND clave ='$contraseña'";
     $resultado = mysqli_query($conexion, $sql);
 
     $filas = mysqli_num_rows($resultado);

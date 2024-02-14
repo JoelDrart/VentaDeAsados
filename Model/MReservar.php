@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Insertar en la base de datos
-        $sqlInsertar = "INSERT INTO Reserva (fechaReserva, horaReserva, tipoReserva, userId, totalPrecio) 
+        $sqlInsertar = "INSERT INTO reserva (fechaReserva, horaReserva, tipoReserva, userId, totalPrecio) 
                 VALUES ('$fechaReserva', '$horaReserva', $opcionSeleccionada, $userid, $totalReserva)";
         
         $resultadoReserva = mysqli_query($conexion, $sqlInsertar);
@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Reserva realizada con éxito. Total: $totalReserva <br>";
 
             // Obtener el último reservaId
-            $sqlReservaId = "SELECT reservaId FROM Reserva ORDER BY reservaId DESC LIMIT 1";
+            $sqlReservaId = "SELECT reservaId FROM reserva ORDER BY reservaId DESC LIMIT 1";
             $resultado = mysqli_query($conexion, $sqlReservaId);
             $ultimoReservaId = 0;
 

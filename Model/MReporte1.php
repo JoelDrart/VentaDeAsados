@@ -2,7 +2,7 @@
 include("../Config/confg.php");
 include("../View/VPlantilla.php");
 
-$sql = "SELECT * FROM Users";
+$sql = "SELECT * FROM users";
 $resultado = mysqli_query($conexion, $sql);
 
 $pdf = new PDF();

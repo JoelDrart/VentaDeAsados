@@ -6,7 +6,7 @@ if(isset($_GET['id'])) {
     $platoId = $_GET['id'];
     
     // Obtener los datos del plato desde la base de datos
-    $sql = "SELECT * FROM Plato WHERE platoId = $platoId";
+    $sql = "SELECT * FROM plato WHERE platoId = $platoId";
     $resultado = mysqli_query($conexion, $sql);
     
     if(mysqli_num_rows($resultado) > 0) {

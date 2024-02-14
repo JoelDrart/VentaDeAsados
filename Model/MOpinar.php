@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Ahora puedes almacenar estos datos en la base de datos o realizar cualquier otra acción necesaria
     // ...
-    $sql = "INSERT INTO Opinion (platoId, userId, puntuacion, opinion) VALUES ('$idPlato', '$idUsuario', '$calificacion', '$comentario')";
+    $sql = "INSERT INTO opinion (platoId, userId, puntuacion, opinion) VALUES ('$idPlato', '$idUsuario', '$calificacion', '$comentario')";
     $resultado = mysqli_query($conexion,$sql);
     if ($resultado) {
         echo "Opinión registrada correctamente";

@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verificar si existe el register-username
     if (isset($usuario)) {
         // Consultar todos los datos del usuario
-        $sql = "SELECT * FROM Users WHERE nombreUsuario='$usuario'";
+        $sql = "SELECT * FROM users WHERE nombreUsuario='$usuario'";
         $resultado = mysqli_query($conexion, $sql);
 
         $filas = mysqli_num_rows($resultado);

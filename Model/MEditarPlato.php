@@ -10,7 +10,7 @@ $tipo = $_POST['tipoP'];
 
 
 // Actualizar el plato en la base de datos
-$sql = "UPDATE Plato SET nombrePlato='$nombre', descripcionPlato='$descripcion', precio='$precio', tipoId='$tipo' WHERE platoId='$platoId'";
+$sql = "UPDATE plato SET nombrePlato='$nombre', descripcionPlato='$descripcion', precio='$precio', tipoId='$tipo' WHERE platoId='$platoId'";
 
 if (mysqli_query($conexion, $sql)) {
     // Verificar si la actualización fue exitosa

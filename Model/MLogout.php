@@ -5,6 +5,6 @@ session_start();
 session_destroy();
 
 // Redirige a la página de inicio de sesión u otra página deseada
-header("Location: ../View/VIinicio.php");
+header("Location: ../Controller/controlador.php?var1=1");
 exit;
 ?>

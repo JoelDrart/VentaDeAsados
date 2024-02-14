@@ -1,9 +1,9 @@
 <?php
-$conexion = mysqli_connect('localhost','root','','VentaDeAsados');
+include("../config/confg.php");
 function obtenerNombreUsuarioPorId($userId) {
     global $conexion;
     
-    $sql = "SELECT nombre FROM Users WHERE userId = $userId";
+    $sql = "SELECT nombre FROM users WHERE userId = $userId";
     $resultado = $conexion->query($sql);
 
     if ($resultado->num_rows > 0) {
@@ -16,7 +16,7 @@ function obtenerNombreUsuarioPorId($userId) {
 function esAdmin($userId) {
     global $conexion;
     
-    $sql = "SELECT tipoUsuario FROM Users WHERE userId = $userId";
+    $sql = "SELECT tipoUsuario FROM users WHERE userId = $userId";
     $resultado = $conexion->query($sql);
 
     if ($resultado->num_rows > 0) {
@@ -29,7 +29,7 @@ function esAdmin($userId) {
 function obtenerNombrePlatoPorId($platoId) {
     global $conexion;
     
-    $sql = "SELECT nombrePlato FROM Plato WHERE platoId = $platoId";
+    $sql = "SELECT nombrePlato FROM plato WHERE platoId = $platoId";
     $resultado = $conexion->query($sql);
 
     if ($resultado->num_rows > 0) {

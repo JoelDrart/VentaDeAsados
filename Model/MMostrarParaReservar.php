@@ -1,6 +1,6 @@
 <?php
 
-$conexion = mysqli_connect('localhost','root','','VentaDeAsados');
+include('../Config/confg.php');
 
 $sql = "SELECT * FROM plato";
 

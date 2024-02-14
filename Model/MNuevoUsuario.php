@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tipoUsuario = 2;
 
     // Verificar si el usuario ya existe en la base de datos
-    $sql_check = "SELECT * FROM Users WHERE nombreUsuario='$usuario' OR email='$email'";
+    $sql_check = "SELECT * FROM users WHERE nombreUsuario='$usuario' OR email='$email'";
     $result_check = mysqli_query($conexion, $sql_check);
     if (mysqli_num_rows($result_check) > 0) {
         echo "<h1>Error: Usuario o contraseña existentes</h1>";
@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Consulta SQL para insertar los datos en la tabla Users
-    $sql = "INSERT INTO Users (nombreUsuario, nombre, apellido, email, telefono, clave, tipoUsuario) 
+    $sql = "INSERT INTO users (nombreUsuario, nombre, apellido, email, telefono, clave, tipoUsuario) 
             VALUES ('$usuario', '$nombre', '$apellido', '$email', '$telefono', '$contraseña', '$tipoUsuario')";
 
     // Ejecutar la consulta
