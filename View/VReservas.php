@@ -10,10 +10,11 @@
   <link rel="stylesheet" href="../css/style.css">
   <!-- <link rel="stylesheet" href="../css/styleReserva.css"> -->
   <link rel="stylesheet" href="../css/reservas.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <?php
 // Inicia la sesión
 session_start();
-include("../Config/confg.php");
+include("../Config/funciones.php");
 ?>
 
 </head>
@@ -32,7 +33,7 @@ include("../Config/confg.php");
                     <ul>
                         <li><a href="../controller/controlador.php?var1=1">Inicio</a></li>
                         <li><a href="#">Reservaciones</a></li>
-                        <li><a href="#">Menu</a></li>
+                        <li><a href="../controller/controlador.php?var1=8">Productos</a></li>
                     </ul>
                 </div>
 
@@ -44,7 +45,7 @@ include("../Config/confg.php");
                             if (isset($_SESSION['userId'])) {
                                 // Usuario autenticado
                                 $username = obtenerNombreUsuarioPorId($_SESSION['userId']);
-                                echo "<li><span id='bienvenida'>Bienvenido, $username!</span></li>";
+                                echo "<li><span id='bienvenida'>¡Bienvenido, $username!</span></li>";
                                 echo "<li><a href='../model/MLogout.php'>Cerrar Sesión</a></li>";
                             } else {
                                 // Usuario no autenticado
@@ -95,9 +96,31 @@ include("../Config/confg.php");
                     <label for="numPersonas">Número de personas: </label>
                     <input type="number" id="numPersonas" name="numPersonas" min="1" max="10" required>
                     <br><br>
+                    <label for="tipoReserva" >Tipo de reserva: </label>
+                    <select id="tipoReserva" name="tipoReserva" required>
+                        <option value="1">Domicilio</option>
+                        <option value="2">Restaurante</option>
+                        <option value="3">Evento</option>
+                        <option value="4">Catering</option>
+                        <option value="5">Empresarial</option>
+                        <option value="6">Familiar</option>
+                        <option value="7">Amigos</option>
+                        <option value="8">Cumpleaños</option>
+                        <option value="9">Aniversario</option>
+                        <option value="10">Boda</option>
+                        <option value="11">Graduación</option>
+                        <option value="12">Despedida de soltero</option>
+                        <option value="13">Despedida de soltera</option>
+                        <option value="14">Baby Shower</option>
+                        <option value="15">Bautizo</option>
+                        <option value="16">Primera Comunión</option>
+                        <option value="17">Confirmación</option>
+                        <option value="18">Quinceañera</option>
+                        <option value="19">Bautizo</option>
+                    </select>
 
                     <h3>Reserva tus platos</h3>
-                    <p>Total: <strong id="total">5</strong></p>
+                    <p>Total: <strong id="total">0</strong></p>
                     <div class="cards">
                         <?php
                             include("../model/MMostrarParaReservar.php")
@@ -162,6 +185,50 @@ include("../Config/confg.php");
             </div>
         </div>
     </footer>
+    <script>
+    $(document).ready(function () {
+        // Manejar el cambio en las cantidades de los platos
+        $('input[name^="platoCantidad"]').on('input', function () {
+            calcularTotal();
+        });
+
+        // Manejar el evento submit del formulario
+        $('form').submit(function (event) {
+            // Obtener el valor actual del total
+            let total = parseFloat($('#total').text());
+
+            // Validar si el total es mayor que 0
+            if (total <= 0) {
+                // Mostrar alerta
+                alert('Debes escoger al menos un plato.');
+
+                // Evitar el envío del formulario
+                event.preventDefault();
+            }
+        });
+    });
+
+    function calcularTotal() {
+        let total = 0;
+
+        // Iterar sobre todas las entradas de cantidades
+        $('input[name^="platoCantidad"]').each(function () {
+            // Obtener el ID del plato y su precio
+            let platoId = $(this).attr('name').replace('platoCantidad[', '').replace(']', '');
+            let precio = parseFloat($('#precio' + platoId).text().replace('$', ''));
+
+            // Calcular el subtotal del plato (cantidad * precio)
+            let cantidad = parseInt($(this).val(), 10);
+            let subtotal = cantidad * precio;
+
+            // Sumar al total general
+            total += subtotal;
+        });
+
+        // Actualizar el elemento con el total
+        $('#total').text(total.toFixed(2));
+    }
+</script>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="../javascript/script.js"></script>
