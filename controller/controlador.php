@@ -43,6 +43,9 @@ if($v1==10){
 else 
 if($v1==11){
     include("../Model/MReporte1.php");
+}else 
+if($v1==12){
+    include("../Model/MReporte2.php");
 }
 
 else
