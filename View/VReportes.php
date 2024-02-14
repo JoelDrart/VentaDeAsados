@@ -67,9 +67,9 @@
                         <div class="slider">
                             <div class="slider-txt">
                                 <h1>Reporte 2</h1>
-                                <p style="text-align: left">Reporte de todos los usuarios</p>
+                                <p style="text-align: left">Reporte de platos</p>
                                 
-                                    <a href="../" class="btn-1">Ingresar</a>
+                                <a href="../controller/controlador.php?var1=12" class="btn-1">Ingresar</a>
                                 </div>
                             </div>
                             <div class="slider-img">
@@ -82,16 +82,18 @@
                         <div class="slider">
                             <div class="slider-txt">
                                 <h1>Reporte 3</h1>
-                                <p style="text-align: left">Reporte de todos los usuarios</p>
+                                <p style="text-align: left">Reporte de </p>
                                 
-                                    <a href="../" class="btn-1">Ingresar</a>
+                                <div class="botones">
+                                    <a href="" class="btn-1">Ingresar</a>
                                 </div>
                             </div>
                             <div class="slider-img">
-                                <img src="../images/producto.jpg" alt="">
+                                <img src="../images/reporte1.png" alt="">
                             </div>
                         </div>
                     </div>
+
 
                     <div class="swiper-slide">
                         <div class="slider">
@@ -107,8 +109,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
                 </div>
 
                 <div class="swiper-button-next"></div>
