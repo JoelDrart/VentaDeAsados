@@ -70,8 +70,7 @@
                                 <p style="text-align: left">Reporte de platos</p>
                                 
                                 <div class="botones">
-                                    <a href="../" class="btn-1">Ingresar</a>
-                                <a href="../controller/controlador.php?var1=12" class="btn-1">Ingresar</a>
+                                    <a href="../controller/controlador.php?var1=12" class="btn-1">Ingresar</a>
                                 </div>
                             </div>
                             <div class="slider-img">

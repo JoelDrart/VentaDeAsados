@@ -101,7 +101,8 @@ CREATE TABLE `reserva` (
   `fechaReserva` date NOT NULL,
   `horaReserva` time NOT NULL,
   `tipoReserva` int(11) NOT NULL,
-  `userId` int(11) NOT NULL
+  `userId` int(11) NOT NULL,
+  `totalPrecio` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -343,6 +344,8 @@ ALTER TABLE `reserva`
   ADD CONSTRAINT `reserva_ibfk_1` FOREIGN KEY (`tipoReserva`) REFERENCES `tiporeserva` (`tipoReserva`),
   ADD CONSTRAINT `reserva_ibfk_2` FOREIGN KEY (`userId`) REFERENCES `users` (`userId`);
 COMMIT;
+
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
