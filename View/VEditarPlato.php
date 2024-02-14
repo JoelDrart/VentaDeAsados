@@ -25,6 +25,17 @@ if(isset($_GET['id'])) {
 }
 ?>
 
+
+<?php
+// Verificar si hay un parámetro de éxito en la URL
+if (isset($_GET['success']) && $_GET['success'] == 'true') {
+    echo '<div class="alert alert-success" role="alert">Actualización exitosa</div>';
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
