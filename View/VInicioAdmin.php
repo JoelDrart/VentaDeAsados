@@ -36,7 +36,7 @@
                     <ul>
                         <li><a href="">Admin</a></li>
                         <li><a href="../controller/controlador.php?var1=5">Inicio</a></li>
-                        <li><a href='../Model/MEditarClientes.php'>Clientes</a></li>
+                        <li><a href="../controller/controlador.php?var1=6">Clientes</a></li>
                         <li><a href='../model/MLogout.php'>Cerrar Sesión</a></li>
                     </ul>
                 </div>
