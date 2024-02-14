@@ -1,8 +1,3 @@
-<?php
-// Inicia la sesión
-session_start();
-include("../Config/confg.php");
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,10 +5,17 @@ include("../Config/confg.php");
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Asados</title>
+  <title>Reservas</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/styleReserva.css">
+  <!-- <link rel="stylesheet" href="../css/styleReserva.css"> -->
+  <link rel="stylesheet" href="../css/reservas.css">
+  <?php
+// Inicia la sesión
+session_start();
+include("../Config/confg.php");
+?>
+
 </head>
 <body>
     <header>
@@ -79,21 +81,32 @@ include("../Config/confg.php");
     <section class="containerPrincipal">
         <?php if (isset($_SESSION['userId'])): ?>
             <!-- el usuario está autenticado -->
-            
+            <h2>¡Reserva ya!</h2>
 
             <div class="container-reserva-ya" >
-                <h2>¡Reserva ya!</h2>
-                <form action="../model/MReservar.php" method="post"></form>
-                <label for="fechaReserva">Fecha de reserva: </label>
-                <input type="date" id="fechaReserva" name="fechaReserva" required>
-                <label for="horaReserva">Hora de reserva: </label>
-                <input type="time" id="horaReserva" name="horaReserva" required>
-                <label for="numPersonas">Número de personas: </label>
-                <input type="number" id="numPersonas" name="numPersonas" required>
-
-
-                <input type="submit" value="Reservar">
                 
+                <form action="../model/MReservar.php" method="post">
+                    <label for="fechaReserva">Fecha de reserva: </label>
+                    <input type="date" id="fechaReserva" name="fechaReserva" min="2024-02-14" max="2024-12-31" required>
+                    <br><br>
+                    <label for="horaReserva">Hora de reserva: </label>
+                    <input type="time" id="horaReserva" name="horaReserva" min="08:00" max="20:00" required>
+                    <br><br>
+                    <label for="numPersonas">Número de personas: </label>
+                    <input type="number" id="numPersonas" name="numPersonas" min="1" max="10" required>
+                    <br><br>
+
+                    <h3>Reserva tus platos</h3>
+                    <p>Total: <strong id="total">5</strong></p>
+                    <div class="cards">
+                        <?php
+                            include("../model/MMostrarParaReservar.php")
+                        ?>
+
+                    </div>
+
+                    <input class="button-submit" type="submit" value="Reservar">
+                </form>
             </div>
 
             
