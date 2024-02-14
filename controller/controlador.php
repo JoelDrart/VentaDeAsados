@@ -30,11 +30,9 @@ if($v1==7){
     // if (!isset($_SESSION['userId'])) {
     //     echo "<h1>Error: Acceso no permitido</h1>";
 
-    }else{
+}else{
         include("../View/VReservas.php");
-    }   
-}
-else 
+    }
 if($v1==8){
     include("../View/VProductos.php");
 }

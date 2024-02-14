@@ -56,7 +56,7 @@
 
     <section class="body-login-registrar">
         <div class="container-login-registrar" id="login-container">
-            <h2>Login</h2>
+            <h2>Ingresar</h2>
             <br>
             <form action="../Model/MValidarLogin.php" method="POST">
                 <label class="lbl-login-registrar" for="login-username" >Usuario Id:</label>
