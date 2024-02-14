@@ -28,7 +28,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Verificar si la inserción fue exitosa
     if ($resultado) {
-        header("Location: ../View/VIinicio.php");
+        echo "<script>alert('Usuario creado exitosamente');</script>"; 
+        header("Location: ../View/VLogin.php");
+        exit;
     } else {
         echo "<h1>Error al insertar los datos en la base de datos: " . mysqli_error($conexion) . "</h1>";
         exit;

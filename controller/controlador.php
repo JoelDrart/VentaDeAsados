@@ -16,7 +16,7 @@ if($v1==3){
 }
 else
 if($v1==4){
-    
+    include("../View/VReportes.php");;
 }
 else
 if($v1==5){
@@ -39,6 +39,10 @@ if($v1==9){
 else 
 if($v1==10){
     include("../View/VEditarPlato.php");
+}
+else 
+if($v1==11){
+    include("../Model/MReporte1.php");
 }
 else
 {

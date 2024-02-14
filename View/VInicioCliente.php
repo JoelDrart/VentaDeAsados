@@ -73,10 +73,8 @@ include("../Config/confg.php");
                                 <p style="text-align: left">Carne de primera calidad, sabor auténtico y textura.</p>
                                 <p style="text-align: left">Con un bocado será una experiencia única que deleitará tus sentidos. </p>
                                 <p style="text-align: left">Sumérgete en un mundo de sabores intensos y aromas irresistibles.</p>
-
                                 <div class="botones">
-                                    <a href="#" class="btn-1">Comprar</a>
-                                    <a href="#cortes-section" class="btn-1">Menu</a> <!-- Modificar el href para que apunte al id "cortes-section" -->
+                                    <a href="../View/VProductos.php" class="btn-1">Menu</a>
                                 </div>
                             </div>
                             <div class="slider-img">
@@ -93,8 +91,7 @@ include("../Config/confg.php");
                                 <p style="text-align: justify">con la más fina carne de res y una selección de </p>
                                 <p style="text-align: justify">ingredientes frescos y deliciosos.</p>
                                 <div class="botones">
-                                    <a href="#" class="btn-1">Comprar</a>
-                                    <a href="#" class="btn-1">Menu</a>
+                                    <a href="../View/VProductos.php" class="btn-1">Menu</a>
                                 </div>
                             </div>
                             <div class="slider-img">
@@ -110,10 +107,7 @@ include("../Config/confg.php");
                                 <p style="text-align: justify">Nuestras tablitas son una deliciosa combinación </p>
                                 <p style="text-align: justify">de embutidos, carnes, pollo y papas, ofreciendo
                                 <p style="text-align: justify">una experiencia gastronómica inigualable.</p>
-                                    
-                                
                                 <div class="botones">
-                                    <a href="#" class="btn-1">Comprar</a>
                                     <a href="../View/VProductos.php" class="btn-1">Menu</a>
                                 </div>
                             </div>
