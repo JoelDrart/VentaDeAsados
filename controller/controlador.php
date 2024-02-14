@@ -58,6 +58,11 @@ if($v1==14){
 if($v1==16){
     include("../Model/MReporte6.php");
 }
+
+else
+if($v1==15){
+    include("../Model/MReporte5.php");
+}
 else
 {
     echo "Ninguna opción";

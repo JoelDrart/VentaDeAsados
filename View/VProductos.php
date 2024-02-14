@@ -61,7 +61,7 @@ function obtenerNombreUsuarioPorId($userId) {
                     if (isset($_SESSION['userId'])) {
                         // Usuario autenticado
                         $username = obtenerNombreUsuarioPorId($_SESSION['userId']);
-                        echo "<li><span id='bienvenida'>Bienvenido, $username!</span></li>";
+                        echo "<li><span id='bienvenida'>¡Bienvenido, $username!</span></li>";
                         echo "<li><a href='../model/MLogout.php'>Cerrar Sesión</a></li>";
                     }else {
                         // Usuario no autenticado ni registrado
