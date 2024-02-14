@@ -26,20 +26,19 @@ if($v1==6){
     include("../View/VEditarClientes.php");
 }
 if($v1==7){
-    if (!isset($_SESSION['userId'])) {
-        echo "<h1>Error: Acceso no permitido</h1>";
-        
-    }else{
-        include("../View/VReservas.php");
-    }   
+    include("../View/VReservas.php");
 }
-else 
+else
 if($v1==8){
     include("../View/VProductos.php");
 }
 else 
 if($v1==9){
     include("../View/VEliminarCliente.php");
+}
+else 
+if($v1==10){
+    include("../View/VEditarPlato.php");
 }
 else
 {

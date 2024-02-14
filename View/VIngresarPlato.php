@@ -6,32 +6,32 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <title>Document</title>
+    <title>Ingresar platos</title>
 </head>
-<body style = background-color:#ffff;>
+<body>
     <section class = "IngresoP">
 
     <div class="Inp_P">
     <center>
         <h1>INGRESO DE PLATOS</h1>
     </center>
-        <form action="../Model/MIngresar.php" method="post">
+        <form action="../Model/MIngresar.php" method="post" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nombre del plato</label>
-            <input type="text" class="form-control" id="" aria-describedby="emailHelp" name="nombreP">
+            <input type="text" class="form-control" id="" aria-describedby="emailHelp" name="nombreP" required>
         <!--<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Descripcion del plato</label>
-            <input type="text" class="form-control" id="" aria-describedby="emailHelp" name="descripcionP">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descripcionP" required></textarea>
         <!--<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Precio del plato</label>
-            <input type="number" class="form-control" id="" name="precioP">
+            <input type="number" class="form-control" id="" name="precioP" step="0.01" min="0.00" required>
         <!--<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>--> 
         </div>
-        <select class="form-select" aria-label="Default select example" name="tipoP">
+        <select class="form-select" aria-label="Default select example" name="tipoP" required>
         <option value = 1>Sopas</option>
         <option value = 2>Light</option>
         <option value = 3>Tablitas</option>
@@ -47,17 +47,25 @@
         <option value = 13>Picaditas</option>
         <option value = 14>Bebidas</option>
         </select>
+        <br>
+        <div class="mb-3">
+            <label for="formFile" class="form-label">   Imágen del Plato</label>
+            <input class="form-control" type="file" id="formFile" name="archivo" required>
+        </div>
         <button type="submit" class="btn btn-primary">Ingresar</button>
+
         </form>
     </div>
     <div class="Vista_P">
     <center>
         <h1>PLATOS INGRESADOS</h1>
     </center>
+    <br>
     <table class="table">
         <thead>
             <tr>
                 <th scope="col">#</th>
+                <th scope="col">Imágen</th>
                 <th scope="col">Plato</th>
                 <th scope="col">Descripción</th>
                 <th scope="col">Precio</th>

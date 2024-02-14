@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Asados</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="../css/styleLog.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
 
-    <div class="menu container">
+        <div class="menu container">
         
-        <img class="logo-1" src="../images/logo.png" alt="">
+        <img class="logo-1" src="../images/logo.svg" alt="">
         <input type="checkbox" id="menu" />
         <label for="menu">
             <img src="../images/menu.png" class="menu-icono" alt="">
@@ -21,18 +21,17 @@
             <nav class="navbar">
                 <div class ="menu-1">
                     <ul>
-                        <li><a href="../controller/controlador.php?var1=1">Inicio</a></li>
-
-                        <li><a href="../controller/controlador.php?var1=7">Reservaciones</a></li>
+                        <li><a href="../controller/controlador.php?var1=4">Inicio</a></li>
+                        <li><a href="#">Reservaciones</a></li>
                         <li><a href="#">Menu</a></li>
-                        <li><a href="../controller/controlador.php?var1=8">Productos</a></li>
                     </ul>
                 </div>
 
-                <img class="logo-2" src="../images/logo.png" alt="">
+                <img class="logo-2" src="../images/logo.svg" alt="">
                 <div class="menu-2">
+                    
                     <ul>
-                        <li><a href="../View/VLogin.php">Ingresar</a></li>
+                        <li><a href="">Cliente</a></li>
                     </ul>
                     <div class ="socials">
                         <a href="https://www.facebook.com/esquina.sabor/">
@@ -56,37 +55,26 @@
         </div>
     </header>
 
-    <section class="body-login-registrar">
-        <div class="container-login-registrar" id="login-container">
-            <h2>Ingresar</h2>
-            <br>
-            <form action="../Model/MValidarLogin.php" method="POST">
-                <label class="lbl-login-registrar" for="login-username" >Usuario Id:</label>
-                <input class="input-login-registrar" type="text" id="login-username" name="login-username" required>
-                <label class="lbl-login-registrar" for="login-password">Contraseña:</label>
-                <input class="input-login-registrar" type="password" id="login-password" name="login-password" required>
-                <br>
-                <!-- <label class="lbl-login-registrar" for="login-type">Tipo de usuario:</label>
-                <select class="input-login-registrar" id="login-type" name="login-type" required>
-                    <option value="1">Admin</option>
-                    <option value="2">Cliente</option>
-                </select> -->
-                <br>
-                <br>
-                <button class="btn-login-registrar" id="login-button" type="submit">Acceder</button>
-            </form>
-            <br>
-            <a href="../Controller/controlador.php?var1=3">Crear Cuenta</a>
+    <main class="products">
+
+    </main>
+
+    <section class="info container_platos">
+    <div class="titulo"><h1>MENÚ</h1></div>
+    <div class="galeria_Platos">
+
+            <?php
+            include("../Model/MMostrarPlatos.php");
+            ?>
         </div>
+  
     </section>
-
-
     <footer class="horario">
         <div class="horario-info container">
             <h2>Información</h2>
             <div class="horario-txt">
                 <div class="txt">
-                    <img class="logo-2" src="../images/logo.png" alt="">
+                    <img class="logo-2" src="../images/logo.svg" alt="">
                 </div>
                 <div class="txt">
                     <h4>Horario</h4>
@@ -123,6 +111,7 @@
     </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script src="../javascript/scriptLog.js"></script>
+  <script src="../javascript/script.js"></script>
 </body>
 </html>
+

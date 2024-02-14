@@ -31,7 +31,7 @@ include("../Config/confg.php");
                     <ul>
                         <li><a href="../controller/controlador.php?var1=4">Inicio</a></li>
                         <li><a href="#">Reservaciones</a></li>
-                        <li><a href="#">Menu</a></li>
+                        <li><a href="../View/VProductos.php">Menu</a></li>
                     </ul>
                 </div>
 
@@ -114,7 +114,7 @@ include("../Config/confg.php");
                                 
                                 <div class="botones">
                                     <a href="#" class="btn-1">Comprar</a>
-                                    <a href="#" class="btn-1">Menu</a>
+                                    <a href="../View/VProductos.php" class="btn-1">Menu</a>
                                 </div>
                             </div>
                             <div class="slider-img">
