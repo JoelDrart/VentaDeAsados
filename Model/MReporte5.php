@@ -4,7 +4,7 @@
     include("../Config/confg.php");
     include("../View/VPlantilla.php");
 
-    $sql = "SELECT P.platoId AS IDPlato, P.nombrePlato AS NombrePlato, COUNT(DR.platoId) AS TotalReservas
+    $sql = "SELECT P.platoId AS IDPlato, P.nombrePlato AS NombrePlato, SUM(DR.cantidad) AS TotalReservas
     FROM detallereserva DR
     JOIN plato P ON DR.platoId = P.platoId
     GROUP BY P.platoId, P.nombrePlato

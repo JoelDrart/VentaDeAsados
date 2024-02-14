@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-02-2024 a las 19:16:12
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 14-02-2024 a las 11:13:32
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `ventadeasados`
 --
+CREATE DATABASE IF NOT EXISTS `ventadeasados` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `ventadeasados`;
 
 -- --------------------------------------------------------
 
@@ -34,6 +36,19 @@ CREATE TABLE `detallereserva` (
   `precio` decimal(10,2) NOT NULL,
   `subtotal` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `detallereserva`
+--
+
+INSERT INTO `detallereserva` (`platoId`, `reservaId`, `cantidad`, `precio`, `subtotal`) VALUES
+(1, 1, 3, 3.50, 10.50),
+(2, 1, 1, 12.00, 12.00),
+(4, 2, 10, 5.50, 55.00),
+(11, 1, 1, 9.99, 9.99),
+(11, 2, 3, 9.99, 29.97),
+(12, 1, 1, 12.99, 12.99),
+(12, 2, 2, 12.99, 25.98);
 
 -- --------------------------------------------------------
 
@@ -62,6 +77,18 @@ CREATE TABLE `opinion` (
   `puntuacion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `opinion`
+--
+
+INSERT INTO `opinion` (`opinionId`, `opinion`, `userId`, `platoId`, `puntuacion`) VALUES
+(1, '', 8, 1, 4),
+(2, '', 8, 8, 1),
+(3, '', 8, 5, 5),
+(4, '', 8, 9, 4),
+(5, '', 8, 9, 3),
+(6, '', 8, 9, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -82,13 +109,20 @@ CREATE TABLE `plato` (
 --
 
 INSERT INTO `plato` (`platoId`, `nombrePlato`, `imagenP`, `descripcionPlato`, `precio`, `tipoId`) VALUES
-(6, 'Plato1', '', 'sdasdasd', 12.00, 1),
-(7, 'Plato2', '', 'sdasdasd', 12.00, 4),
-(8, 'Plato2', '', 'sdasdasd', 12.00, 4),
-(9, 'Plato2', '', 'sdasdasd', 12.00, 4),
-(10, 'Plato2', '', 'sdasdasd', 12.00, 4),
-(11, 'Plato2', '', 'sdasdasd', 12.00, 4),
-(12, 'Plato2', '1649083760487.jpg', 'sdasdasd', 12.00, 4);
+(1, 'Hamburguesa', 'hamb.jpeg', 'Hamburguesa', 3.50, 1),
+(2, 'Tomahawk', 'toma.jpg', 'Carne Premium', 12.00, 7),
+(3, 'Tablita', 'tab.jpeg', 'Tablita', 8.00, 3),
+(4, 'Chuleta', 'chu.jpg', 'Chuleta Asada', 5.50, 12),
+(5, 'Consomé', 'conso.jpg', 'De pollo', 1.99, 1),
+(6, 'Fajita', 'fajita.jpg', 'Pollo o carne', 6.99, 11),
+(7, 'Camarones Asados', 'cama.jpg', 'Camarones asados con papas fritas', 7.99, 8),
+(8, 'Churrasco de pollo o carne', 'churr.jpg', 'Con arroz y ensalada', 5.99, 9),
+(9, 'Alitas', 'altias.jpg', '5 alitas BBQ', 3.99, 10),
+(10, 'Normal', 'normal.jpg', 'Acompañado de carne pollo o embutidos', 4.50, 13),
+(11, 'Lomo Fino', 'lomo.jpg', 'Lomo fino', 9.99, 7),
+(12, 'Vino de Mortiño', 'vino.jpg', 'De mortiño', 12.99, 14),
+(13, 'Salchipapa', 'scal.jpg', 'Salchipapa', 2.50, 5),
+(14, 'Pollo al Grill', 'pollo.jpg', 'Con ensalada fresca', 5.50, 2);
 
 -- --------------------------------------------------------
 
@@ -104,6 +138,14 @@ CREATE TABLE `reserva` (
   `userId` int(11) NOT NULL,
   `totalPrecio` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `reserva`
+--
+
+INSERT INTO `reserva` (`reservaId`, `fechaReserva`, `horaReserva`, `tipoReserva`, `userId`, `totalPrecio`) VALUES
+(1, '2024-02-22', '11:06:00', 2, 8, 45.48),
+(2, '2024-02-22', '09:09:00', 9, 8, 110.95);
 
 -- --------------------------------------------------------
 
@@ -200,7 +242,9 @@ INSERT INTO `users` (`userId`, `nombreUsuario`, `nombre`, `apellido`, `email`, `
 (4, 'erickjoel', 'ERICK JOEL', 'SANCHEZ', 'joel.sanchez@espoch.edu.ec', '0123456789', '1234', 1),
 (5, 'franklin', 'FRANKLIN', 'NOBOA', 'franklin.noboa@espoch.edu.ec', '0123456789', '1234', 1),
 (6, 'andres', 'ANDRES', 'CHISAGUANO', 'andres.chisaguano@espoch.edu.ec', '0123456789', '1234', 1),
-(7, 'danilo', 'DANILO', 'BAQUERO', 'danilo.baquero@espoch.edu.ec', '0123456789', '1234', 1);
+(7, 'danilo', 'DANILO', 'BAQUERO', 'danilo.baquero@espoch.edu.ec', '0123456789', '1234', 1),
+(8, 'luisito1', 'Luis', 'Perez', 'luis@gmail.com', '0123456789', '1234', 2),
+(9, 'joel', 'Joel', 'KKKK', 'asda@gmail.com', '0123456789', '1234', 2);
 
 --
 -- Índices para tablas volcadas
@@ -275,19 +319,19 @@ ALTER TABLE `galeria`
 -- AUTO_INCREMENT de la tabla `opinion`
 --
 ALTER TABLE `opinion`
-  MODIFY `opinionId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `opinionId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `plato`
 --
 ALTER TABLE `plato`
-  MODIFY `platoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `platoId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `reserva`
 --
 ALTER TABLE `reserva`
-  MODIFY `reservaId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `reservaId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `tipoplato`
@@ -305,7 +349,7 @@ ALTER TABLE `tiporeserva`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restricciones para tablas volcadas
@@ -344,8 +388,6 @@ ALTER TABLE `reserva`
   ADD CONSTRAINT `reserva_ibfk_1` FOREIGN KEY (`tipoReserva`) REFERENCES `tiporeserva` (`tipoReserva`),
   ADD CONSTRAINT `reserva_ibfk_2` FOREIGN KEY (`userId`) REFERENCES `users` (`userId`);
 COMMIT;
-
-
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

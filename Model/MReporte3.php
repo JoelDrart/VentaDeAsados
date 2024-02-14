@@ -2,7 +2,7 @@
     include("../Config/confg.php");
     include("../View/VPlantilla.php");
 
-    $sql = "SELECT R.reservaId AS IDReserva, U.nombreUsuario AS NombreCliente, R.fechaReserva AS FechaReserva, R.horaReserva AS HoraReserva, TR.nombreReserva AS Tipo, R.totalPrecio AS TotalCobrar
+    $sql = "SELECT R.reservaId AS IDReserva, U.nombre AS NombreCliente, R.fechaReserva AS FechaReserva, R.horaReserva AS HoraReserva, TR.nombreReserva AS Tipo, R.totalPrecio AS TotalCobrar
             FROM Reserva R JOIN Users U ON R.userId = U.userId
                 JOIN TipoReserva TR ON R.tipoReserva = TR.tipoReserva 
     ";
