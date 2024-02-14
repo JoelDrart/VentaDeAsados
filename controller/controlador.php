@@ -41,6 +41,10 @@ else
 if($v1==9){
     include("../View/VEliminarCliente.php");
 }
+else 
+if($v1==10){
+    include("../View/VEditarPlato.php");
+}
 else
 {
     echo "Ninguna opción";
