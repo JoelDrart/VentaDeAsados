@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="../css/style.css">
   <!-- <link rel="stylesheet" href="../css/styleReserva.css"> -->
-  <link rel="stylesheet" href="../css/reservas.css">
+  <!-- <link rel="stylesheet" href="../css/reservas.css"> -->
+  <link rel="stylesheet" href="../css/reservasNuevo.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <?php
 // Inicia la sesión
