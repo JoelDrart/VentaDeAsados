@@ -100,10 +100,10 @@
                     <div class="swiper-slide">
                         <div class="slider">
                             <div class="slider-txt">
-                                <h1>Reporte 6</h1>
-                                <p style="text-align: left">Reporte de todos los usuarios</p>
+                                <h1>Reporte 4</h1>
+                                <p style="text-align: left">Reporte de Opiniones</p>
                                 <div class="botones">
-                                    <a href="../" class="btn-1">Ingresar</a>
+                                    <a href="../controller/controlador.php?var1=14" class="btn-1">Ingresar</a>
                                 </div>
                             </div>
                             <div class="slider-img">
