@@ -115,9 +115,9 @@
                         <div class="slider">
                             <div class="slider-txt">
                                 <h1>Reporte 5</h1>
-                                <p style="text-align: left">Reporte de todos los usuarios</p>
+                                <p style="text-align: left">Reporte de los platos más vendidos</p>
                                 <div class="botones">
-                                    <a href="../" class="btn-1">Ingresar</a>
+                                    <a href="../controller/controlador.php?var1=15" class="btn-1">VER</a>
                                 </div>
                             </div>
                             <div class="slider-img">
