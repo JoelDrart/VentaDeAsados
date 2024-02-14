@@ -60,6 +60,13 @@ else
 if($v1==15){
     include("../Model/MReporte5.php");
 }
+
+
+else
+if($v1==21){
+    // AYUDAAA AQUIIIIIII
+    // include("../Model/MReporte5.php");
+}
 else
 {
     echo "Ninguna opción";

@@ -73,6 +73,8 @@ include("../Config/funciones.php");
                             </div>
                         </a>
                     </div>
+                    <br>
+                    <p><a href="../controller/controlador.php?var1=21" style="color: white; text-decoration:none;">Ayuda</a></p>
                 </div>
             </nav>
         </div>
