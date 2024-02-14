@@ -79,9 +79,24 @@ include("../Config/confg.php");
     <section class="containerPrincipal">
         <?php if (isset($_SESSION['userId'])): ?>
             <!-- el usuario está autenticado -->
-            <h2>¡Reserva ya!</h2>
+            
+
+            <div class="container-reserva-ya" >
+                <h2>¡Reserva ya!</h2>
+                <form action="../model/MReservar.php" method="post"></form>
+                <label for="fechaReserva">Fecha de reserva: </label>
+                <input type="date" id="fechaReserva" name="fechaReserva" required>
+                <label for="horaReserva">Hora de reserva: </label>
+                <input type="time" id="horaReserva" name="horaReserva" required>
+                <label for="numPersonas">Número de personas: </label>
+                <input type="number" id="numPersonas" name="numPersonas" required>
 
 
+                <input type="submit" value="Reservar">
+                
+            </div>
+
+            
 
         <?php else: ?>
             <!-- el usuario no está autenticado -->
