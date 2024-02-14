@@ -83,10 +83,10 @@
                         <div class="slider">
                             <div class="slider-txt">
                                 <h1>Reporte 3</h1>
-                                <p style="text-align: left">Reporte de todos los usuarios</p>
+                                <p style="text-align: left">Reporte de todas las reservas</p>
                                 
                                 <div class="botones">
-                                    <a href="../" class="btn-1">Ingresar</a>
+                                    <a href="../controller/controlador.php?var1=13" class="btn-1">Ingresar</a>
                                 </div>
                             </div>
                             <div class="slider-img">

@@ -27,13 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Aquí puedes realizar la lógica de almacenamiento en la base de datos
         // ...
 
-        // Verificar la conexión
-        if (!$conexion) {
-            die("La conexión falló: " . mysqli_connect_error());
-        }
-
-        // Iniciar una transacción para asegurar la consistencia de los datos
-        mysqli_autocommit($conexion, FALSE);
 
         // Calcular el total de la reserva
         $totalReserva = 0;
@@ -56,9 +49,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Insertar en la base de datos
         $sqlInsertar = "INSERT INTO Reserva (fechaReserva, horaReserva, tipoReserva, userId, totalPrecio) 
-    VALUES ('$fechaReserva', '$horaReserva', $opcionSeleccionada, $userid, $totalReserva)";
+                VALUES ('$fechaReserva', '$horaReserva', $opcionSeleccionada, $userid, $totalReserva)";
+        
+        $resultadoReserva = mysqli_query($conexion, $sqlInsertar);
 
-        if (mysqli_query($conexion, $sqlInsertar)) {
+        if ($resultadoReserva) {
             echo "Reserva realizada con éxito. Total: $totalReserva <br>";
 
             // Obtener el último reservaId
@@ -84,9 +79,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                             // Agregar el plato al id de la reserva en la tabla detallereserva
                             $sqlInsertarDetalle = "INSERT INTO DetalleReserva (reservaId, platoId, cantidad, precio, subtotal) 
-                    VALUES ($ultimoReservaId, $platoId, $cantidad, $precioPlato, $subtotal)";
+                                     VALUES ($ultimoReservaId, $platoId, $cantidad, $precioPlato, $subtotal)";
+                            
+                            $resultadoDetalle = mysqli_query($conexion, $sqlInsertarDetalle);
 
-                            if (mysqli_query($conexion, $sqlInsertarDetalle)) {
+                            if ($resultadoDetalle) {
                                 echo "Detalle de reserva realizado con éxito. Subtotal: $subtotal <br>";
                             } else {
                                 echo "Error al realizar el detalle de reserva: " . mysqli_error($conexion);

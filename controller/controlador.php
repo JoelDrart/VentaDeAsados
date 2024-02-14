@@ -44,6 +44,11 @@ else
 if($v1==11){
     include("../Model/MReporte1.php");
 }
+
+else
+if($v1==13){
+    include("../Model/MReporte3.php");
+}
 else
 {
     echo "Ninguna opción";

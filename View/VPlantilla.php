@@ -30,5 +30,43 @@ class PDF extends FPDF
         $this->SetFont('Arial','',10);
         $this->Cell(0,10,'LA ESQUINA DEL SABOR',0,0,'C');
     }
+    // Tabla coloreada
+    function FancyReservaTable($header, $data)
+    {
+        // Colores, ancho de línea y fuente en negrita
+        $this->SetFillColor(255,0,0);
+        $this->SetTextColor(255);
+        $this->SetDrawColor(128,0,0);
+        $this->SetLineWidth(.3);
+        $this->SetFont('','B');
+        
+        // Cabecera
+        $w = array(30, 30, 30, 30, 50, 40); // Widths of the columns
+        for($i=0; $i<count($header); $i++)
+            $this->Cell($w[$i], 7, $header[$i], 1, 0, 'C', true);
+        $this->Ln();
+
+        // Restauración de colores y fuentes
+        $this->SetFillColor(224,235,255);
+        $this->SetTextColor(0);
+        $this->SetFont('');
+
+        // Datos
+        $fill = false;
+        foreach($data as $row)
+        {
+            $this->Cell($w[0], 6, $row['IDReserva'], 'LR', 0, 'L', $fill); // ID Reserva
+            $this->Cell($w[1], 6, $row['FechaReserva'], 'LR', 0, 'L', $fill); // Fecha
+            $this->Cell($w[2], 6, $row['HoraReserva'], 'LR', 0, 'L', $fill); // Hora
+            $this->Cell($w[3], 6, $row['Tipo'], 'LR', 0, 'L', $fill); // Tipo
+            $this->Cell($w[4], 6, $row['NombreCliente'], 'LR', 0, 'L', $fill); // Cliente
+            $this->Cell($w[5], 6, number_format($row['TotalCobrar']), 'LR', 0, 'R', $fill); // TotalCobrar
+            $this->Ln();
+            $fill = !$fill;
+        }
+
+        // Línea de cierre
+        $this->Cell(array_sum($w), 0, '', 'T');
+    }
 }
 ?>
