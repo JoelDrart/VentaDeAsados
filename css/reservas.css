@@ -48,7 +48,7 @@ section h2{
     font-size: 16px;
     transition: 0.3s;
 }
-.container-reserva-ya h3{
+.container-reserva-ya h3 h4{
     text-align: center;
     margin-bottom: 20px;
     /* font-size: 30px; */
@@ -81,4 +81,10 @@ section h2{
 .container-reserva-ya p{
     color: #e01f1f;
     text-align: right;
+}
+
+#catAPI {
+    max-width: 50%; /* Ensure the image doesn't exceed its container */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
 }
