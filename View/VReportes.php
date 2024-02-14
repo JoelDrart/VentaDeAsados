@@ -23,7 +23,7 @@
                     <ul>
                         <li><a href="../controller/controlador.php?var1=6">Usuarios</a></li>
                         <li><a href="../View/VIngresarPlato.php">Productos</a></li>
-                        <li><a href="#">Reportes</a></li>
+                        <li><a href="../controller/controlador.php?var1=4">Reportes</a></li>
                         <li><a href=""></a> </li>
                         <li><a href=""></a> </li>
                         <li><a href=""></a> </li>
@@ -50,17 +50,15 @@
                     <div class="swiper-slide">
                         <div class="slider">
                             <div class="slider-txt">
-                                <h1>CLIENTES</h1>
-                                <p style="text-align: left">Ingresar nuevos Clientes</p>
-                                <p style="text-align: left">Mostrar los clientes</p>
-                                <p style="text-align: left">Eliminar Clientes</p>
-                                <p style="text-align: left">Editar Clientes</p>
+                                <h1>Reporte 1</h1>
+                                <p style="text-align: left">Reporte de todos los usuarios</p>
+                                
                                 <div class="botones">
-                                    <a href="../controller/controlador.php?var1=6" class="btn-1">Ingresar</a>
+                                    <a href="../controller/controlador.php?var1=11" class="btn-1">Ingresar</a>
                                 </div>
                             </div>
                             <div class="slider-img">
-                                <img src="../images/cliente.jpg" alt="">
+                                <img src="../images/reporte1.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -68,13 +66,10 @@
                     <div class="swiper-slide">
                         <div class="slider">
                             <div class="slider-txt">
-                                <h1>PRODUCTOS</h1>
-                                <p style="text-align: left">Ingresar nuevos Productos</p>
-                                <p style="text-align: left">Mostrar Productos</p>
-                                <p style="text-align: left">Eliminar Productos</p>
-                                <p style="text-align: left">Editar  Productos</p>
-                                <div class="botones">
-                                    <a href="../View/VIngresarPlato.php" class="btn-1">Ingresar</a>
+                                <h1>Reporte 2</h1>
+                                <p style="text-align: left">Reporte de todos los usuarios</p>
+                                
+                                    <a href="../" class="btn-1">Ingresar</a>
                                 </div>
                             </div>
                             <div class="slider-img">
@@ -86,17 +81,14 @@
                     <div class="swiper-slide">
                         <div class="slider">
                             <div class="slider-txt">
-                                <h1>Ventas</h1>
-                                <p style="text-align: left">Mostrar Ventas</p>
-                                <p style="text-align: left">Eliminar Ventas</p>
-                                <p style="text-align: left">Editar  Ventas</p>
-                                    
-                                <div class="botones">
-                                    <a href="#" class="btn-1">Ingresar</a>
+                                <h1>Reporte 3</h1>
+                                <p style="text-align: left">Reporte de todos los usuarios</p>
+                                
+                                    <a href="../" class="btn-1">Ingresar</a>
                                 </div>
                             </div>
                             <div class="slider-img">
-                                <img src="../images/venta.jpg" alt="">
+                                <img src="../images/producto.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -104,20 +96,14 @@
                     <div class="swiper-slide">
                         <div class="slider">
                             <div class="slider-txt">
-                                <h1>Reportes</h1>
-                                <p style="text-align: left">Reporte de productos</p>
-                                <p style="text-align: left">Reporte de reservas</p>
-                                <p style="text-align: left">Reporte de platos</p>
-                                <p style="text-align: left">Reporte de .....</p>
-                                <p style="text-align: left">Reporte de .....</p>
-                                <p style="text-align: left">Reporte de .....</p>
-                                    
-                                <div class="botones">
-                                    <a href="#" class="btn-1">Ingresar</a>
+                                <h1>Reporte 4</h1>
+                                <p style="text-align: left">Reporte de todos los usuarios</p>
+                                
+                                    <a href="../" class="btn-1">Ingresar</a>
                                 </div>
                             </div>
                             <div class="slider-img">
-                                <img src="../images/reporte.jpg" alt="">
+                                <img src="../images/producto.jpg" alt="">
                             </div>
                         </div>
                     </div>

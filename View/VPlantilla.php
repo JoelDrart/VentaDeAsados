@@ -9,7 +9,7 @@ class PDF extends FPDF
         // Logo
         $this->Image('../images/logo.png',10,8,33);
         // Título
-        $this->SetFont('Arial','B',15);
+        $this->SetFont('Arial','I',15);
         $this->Cell(0,10,'LA ESQUINA DEL SABOR',0,1,'C');
         // Línea de separación
         $this->Line(10, 42, 200, 42);

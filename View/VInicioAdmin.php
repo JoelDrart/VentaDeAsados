@@ -23,7 +23,7 @@
                     <ul>
                         <li><a href="../controller/controlador.php?var1=6">Usuarios</a></li>
                         <li><a href="../View/VIngresarPlato.php">Productos</a></li>
-                        <li><a href="#">Reportes</a></li>
+                        <li><a href="../controller/controlador.php?var1=4">Reportes</a></li>
                         <li><a href=""></a> </li>
                         <li><a href=""></a> </li>
                         <li><a href=""></a> </li>
@@ -113,7 +113,7 @@
                                 <p style="text-align: left">Reporte de .....</p>
                                     
                                 <div class="botones">
-                                    <a href="#" class="btn-1">Ingresar</a>
+                                    <a href="../controller/controlador.php?var1=4" class="btn-1">Ingresar</a>
                                 </div>
                             </div>
                             <div class="slider-img">
