@@ -12,17 +12,17 @@
 <header>
 
     <div class="menu container">
-        <img class="logo-1" src="images/logo.png" alt="">
+        <img class="logo-1" src="../images/logo.png" alt="">
         <input type="checkbox" id="menu" />
         <label for="menu">
-            <img src="images/menu.png" class="menu-icono" alt="">
+            <img src="../images/menu.png" class="menu-icono" alt="">
         </label>
         <nav class="navbar">
             <div class ="menu-1">
                 <ul>
                     <li><a href="../controller/controlador.php?var1=5">Inicio</a></li>
                     <li><a href="../controller/controlador.php?var1=6">Edición</a></li>
-                    <li><a href="#">Reportes</a></li>
+                    <li><a href="../controller/controlador.php?var1=9">Eliminación</a></li>
                 </ul>
             </div>
 
@@ -57,13 +57,9 @@
         <div class="container-login-registrar" id="login-container">
             <h2>Buscar</h2>
             <br>
-            <form action="../Model/MActualizarCliente.php" method="POST">
+            <form action="../Model/MEditarClientes.php" method="POST">
                 <label class="lbl-login-registrar" for="register-username">User name:</label>
                 <input class="input-login-registrar" type="text" id="register-username" name="register-username" required>
-
-                <label class="lbl-login-registrar" for="register-password">Contraseña:</label>
-                <input class="input-login-registrar" type="password" id="register-password" name="register-password" required>
-                
                 <br>
                 <br>
                 <button class="btn-login-registrar" id="register-button" type="submit">Editar Cuenta</button>
