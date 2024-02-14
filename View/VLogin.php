@@ -24,7 +24,6 @@
                         <li><a href="../controller/controlador.php?var1=1">Inicio</a></li>
 
                         <li><a href="../controller/controlador.php?var1=7">Reservaciones</a></li>
-                        <li><a href="#">Menu</a></li>
                         <li><a href="../controller/controlador.php?var1=8">Productos</a></li>
                     </ul>
                 </div>

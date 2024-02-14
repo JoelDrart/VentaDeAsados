@@ -13,7 +13,7 @@
   <?php
 // Inicia la sesión
 session_start();
-include("../Config/confg.php");
+include("../Config/funciones.php");
 ?>
 
 </head>
@@ -31,8 +31,8 @@ include("../Config/confg.php");
                 <div class ="menu-1">
                     <ul>
                         <li><a href="../controller/controlador.php?var1=1">Inicio</a></li>
-                        <li><a href="#">Reservaciones</a></li>
-                        <li><a href="#">Menu</a></li>
+                        <li><a href="../controller/controlador.php?var1=7">Reservaciones</a></li>
+                        <li><a href="../controller/controlador.php?var1=8">Productos</a></li>
                     </ul>
                 </div>
 
@@ -44,7 +44,7 @@ include("../Config/confg.php");
                             if (isset($_SESSION['userId'])) {
                                 // Usuario autenticado
                                 $username = obtenerNombreUsuarioPorId($_SESSION['userId']);
-                                echo "<li><span id='bienvenida'>Bienvenido, $username!</span></li>";
+                                echo "<li><span id='bienvenida'>¡Bienvenido, $username!</span></li>";
                                 echo "<li><a href='../model/MLogout.php'>Cerrar Sesión</a></li>";
                             } else {
                                 // Usuario no autenticado

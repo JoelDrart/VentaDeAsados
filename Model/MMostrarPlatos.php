@@ -14,7 +14,7 @@ while ($mostrar = mysqli_fetch_array($resultado)) { //recorrer el arreglo $resul
             <h3 style="color:white;" class="card-title"><?php echo $mostrar['nombrePlato']?></h3>
             <p style="color:white;" class="card-text"><?php echo $mostrar['descripcionPlato']?></p>
             <p style="color:white;" class="card-text"><b>$<?php echo $mostrar['precio']?></b></p>
-            <a href="#" class="btn btn-primary">Reservar</a>
+            <a href="../controller/controlador.php?var1=7" class="btn btn-primary">Reservar</a>
         </div>
         </div>
 

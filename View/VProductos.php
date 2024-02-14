@@ -1,3 +1,24 @@
+<?php
+// Inicia la sesión
+session_start();
+$conexion = mysqli_connect('localhost','root','','VentaDeAsados');
+function obtenerNombreUsuarioPorId($userId) {
+    global $conexion;
+    
+    $sql = "SELECT nombre FROM Users WHERE userId = $userId";
+    $resultado = $conexion->query($sql);
+
+    if ($resultado->num_rows > 0) {
+        $fila = $resultado->fetch_assoc();
+        return $fila["nombre"];
+    } else {
+        return "Usuario no encontrado";
+    }
+}
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +34,7 @@
 
         <div class="menu container">
         
-        <img class="logo-1" src="../images/logo.svg" alt="">
+        <img class="logo-1" src="../images/logo.png" alt="">
         <input type="checkbox" id="menu" />
         <label for="menu">
             <img src="../images/menu.png" class="menu-icono" alt="">
@@ -21,18 +42,30 @@
             <nav class="navbar">
                 <div class ="menu-1">
                     <ul>
-                        <li><a href="../controller/controlador.php?var1=4">Inicio</a></li>
-                        <li><a href="#">Reservaciones</a></li>
-                        <li><a href="#">Menu</a></li>
+                        <li><a href="../controller/controlador.php?var1=1">Inicio</a></li>
+
+                        <li><a href="../controller/controlador.php?var1=7">Reservaciones</a></li>
+
+                        <li><a href="../controller/controlador.php?var1=8">Productos</a></li>
                     </ul>
                 </div>
 
-                <img class="logo-2" src="../images/logo.svg" alt="">
+                <img class="logo-2" src="../images/logo.png" alt="">
                 <div class="menu-2">
-                    
-                    <ul>
-                        <li><a href="">Cliente</a></li>
-                    </ul>
+                <ul>
+                    <?php
+                    // Verifica si el usuario está autenticado
+                    if (isset($_SESSION['userId'])) {
+                        // Usuario autenticado
+                        $username = obtenerNombreUsuarioPorId($_SESSION['userId']);
+                        echo "<li><span id='bienvenida'>Bienvenido, $username!</span></li>";
+                        echo "<li><a href='../model/MLogout.php'>Cerrar Sesión</a></li>";
+                    }else {
+                        // Usuario no autenticado ni registrado
+                        echo '<li><a href="../controller/controlador.php?var1=2">Ingresar</a></li>';
+                    }
+                    ?>
+                </ul>
                     <div class ="socials">
                         <a href="https://www.facebook.com/esquina.sabor/">
                             <div class="social">
